@@ -1,4 +1,4 @@
-# NJCSV — New Jersey Civil Statistics Visualizations
+# NJCSV - New Jersey Civil Statistics Visualizations
 
 A site for exploring New Jersey Division of Family Development programs. It uses actual statewide CPS report values, with a source PDF, table, and page attached to each observation. It is an independent analysis, not an official state website.
 
