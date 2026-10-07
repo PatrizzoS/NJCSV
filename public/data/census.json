@@ -1,0 +1,417 @@
+{
+  "year": 2024,
+  "period": "2020\u20132024",
+  "survey": "American Community Survey 5-year estimates",
+  "retrievedAt": "2026-10-03",
+  "sources": [
+    {
+      "table": "B11001",
+      "url": "https://www2.census.gov/programs-surveys/acs/summary_file/2024/table-based-SF/data/5YRData/acsdt5y2024-b11001.dat",
+      "extractSha256": "fc92585a08c79a134973a3df1a0e29bdfe2fd8594406424c575c38c673ff54c1"
+    },
+    {
+      "table": "B17017",
+      "url": "https://www2.census.gov/programs-surveys/acs/summary_file/2024/table-based-SF/data/5YRData/acsdt5y2024-b17017.dat",
+      "extractSha256": "fce65f04bbf8fa13c4d223125644bba227482240bd153048a5bceab09ffa4c86"
+    },
+    {
+      "table": "B19013",
+      "url": "https://www2.census.gov/programs-surveys/acs/summary_file/2024/table-based-SF/data/5YRData/acsdt5y2024-b19013.dat",
+      "extractSha256": "22b9d2d511489c636be8397fe2e349aeb09e67058c411938a8919828c46c99df"
+    },
+    {
+      "table": "B25010",
+      "url": "https://www2.census.gov/programs-surveys/acs/summary_file/2024/table-based-SF/data/5YRData/acsdt5y2024-b25010.dat",
+      "extractSha256": "9f3fecf7918334c59be69dbd1a1f459a33a28bea2debbc303d3d8eba73186cfb"
+    }
+  ],
+  "counties": [
+    {
+      "county": "Atlantic",
+      "fips": "34001",
+      "households": 109557,
+      "householdsMoe": 883,
+      "povertyUniverse": 109557,
+      "povertyHouseholds": 13894,
+      "povertyHouseholdsMoe": 1113,
+      "medianIncome": 78050,
+      "medianIncomeMoe": 1834,
+      "averageHouseholdSize": 2.47,
+      "povertyPct": 12.681982894748852,
+      "group": "C"
+    },
+    {
+      "county": "Bergen",
+      "fips": "34003",
+      "households": 355127,
+      "householdsMoe": 1060,
+      "povertyUniverse": 355127,
+      "povertyHouseholds": 27135,
+      "povertyHouseholdsMoe": 1196,
+      "medianIncome": 124884,
+      "medianIncomeMoe": 1735,
+      "averageHouseholdSize": 2.68,
+      "povertyPct": 7.640928456580322,
+      "group": "A"
+    },
+    {
+      "county": "Burlington",
+      "fips": "34005",
+      "households": 177222,
+      "householdsMoe": 741,
+      "povertyUniverse": 177222,
+      "povertyHouseholds": 12388,
+      "povertyHouseholdsMoe": 971,
+      "medianIncome": 108111,
+      "medianIncomeMoe": 1600,
+      "averageHouseholdSize": 2.58,
+      "povertyPct": 6.990102808906343,
+      "group": "A"
+    },
+    {
+      "county": "Camden",
+      "fips": "34007",
+      "households": 202540,
+      "householdsMoe": 891,
+      "povertyUniverse": 202540,
+      "povertyHouseholds": 25761,
+      "povertyHouseholdsMoe": 1157,
+      "medianIncome": 88755,
+      "medianIncomeMoe": 1883,
+      "averageHouseholdSize": 2.57,
+      "povertyPct": 12.718969092524933,
+      "group": "C"
+    },
+    {
+      "county": "Cape May",
+      "fips": "34009",
+      "households": 44884,
+      "householdsMoe": 745,
+      "povertyUniverse": 44884,
+      "povertyHouseholds": 4295,
+      "povertyHouseholdsMoe": 692,
+      "medianIncome": 91128,
+      "medianIncomeMoe": 3274,
+      "averageHouseholdSize": 2.08,
+      "povertyPct": 9.569111487389716,
+      "group": "B"
+    },
+    {
+      "county": "Cumberland",
+      "fips": "34011",
+      "households": 53781,
+      "householdsMoe": 503,
+      "povertyUniverse": 53781,
+      "povertyHouseholds": 8860,
+      "povertyHouseholdsMoe": 805,
+      "medianIncome": 67436,
+      "medianIncomeMoe": 1985,
+      "averageHouseholdSize": 2.68,
+      "povertyPct": 16.4742195199048,
+      "group": "C"
+    },
+    {
+      "county": "Essex",
+      "fips": "34013",
+      "households": 319788,
+      "householdsMoe": 1015,
+      "povertyUniverse": 319788,
+      "povertyHouseholds": 51078,
+      "povertyHouseholdsMoe": 2298,
+      "medianIncome": 80789,
+      "medianIncomeMoe": 1638,
+      "averageHouseholdSize": 2.63,
+      "povertyPct": 15.972456752598596,
+      "group": "C"
+    },
+    {
+      "county": "Gloucester",
+      "fips": "34015",
+      "households": 112545,
+      "householdsMoe": 623,
+      "povertyUniverse": 112545,
+      "povertyHouseholds": 9442,
+      "povertyHouseholdsMoe": 610,
+      "medianIncome": 105115,
+      "medianIncomeMoe": 2579,
+      "averageHouseholdSize": 2.67,
+      "povertyPct": 8.389533075658626,
+      "group": "A"
+    },
+    {
+      "county": "Hudson",
+      "fips": "34017",
+      "households": 299682,
+      "householdsMoe": 1343,
+      "povertyUniverse": 299682,
+      "povertyHouseholds": 43956,
+      "povertyHouseholdsMoe": 1881,
+      "medianIncome": 91795,
+      "medianIncomeMoe": 1657,
+      "averageHouseholdSize": 2.37,
+      "povertyPct": 14.667547600456484,
+      "group": "B"
+    },
+    {
+      "county": "Hunterdon",
+      "fips": "34019",
+      "households": 50860,
+      "householdsMoe": 274,
+      "povertyUniverse": 50860,
+      "povertyHouseholds": 2425,
+      "povertyHouseholdsMoe": 372,
+      "medianIncome": 141715,
+      "medianIncomeMoe": 3618,
+      "averageHouseholdSize": 2.51,
+      "povertyPct": 4.7679905623279595,
+      "group": "A"
+    },
+    {
+      "county": "Mercer",
+      "fips": "34021",
+      "households": 144114,
+      "householdsMoe": 834,
+      "povertyUniverse": 144114,
+      "povertyHouseholds": 15845,
+      "povertyHouseholdsMoe": 1132,
+      "medianIncome": 100645,
+      "medianIncomeMoe": 2565,
+      "averageHouseholdSize": 2.56,
+      "povertyPct": 10.994768030864455,
+      "group": "C"
+    },
+    {
+      "county": "Middlesex",
+      "fips": "34023",
+      "households": 307782,
+      "householdsMoe": 1150,
+      "povertyUniverse": 307782,
+      "povertyHouseholds": 27245,
+      "povertyHouseholdsMoe": 1533,
+      "medianIncome": 111549,
+      "medianIncomeMoe": 1881,
+      "averageHouseholdSize": 2.75,
+      "povertyPct": 8.85204462899065,
+      "group": "A"
+    },
+    {
+      "county": "Monmouth",
+      "fips": "34025",
+      "households": 251712,
+      "householdsMoe": 1121,
+      "povertyUniverse": 251712,
+      "povertyHouseholds": 18401,
+      "povertyHouseholdsMoe": 1140,
+      "medianIncome": 124845,
+      "medianIncomeMoe": 2115,
+      "averageHouseholdSize": 2.54,
+      "povertyPct": 7.310338799898297,
+      "group": "A"
+    },
+    {
+      "county": "Morris",
+      "fips": "34027",
+      "households": 193245,
+      "householdsMoe": 705,
+      "povertyUniverse": 193245,
+      "povertyHouseholds": 11232,
+      "povertyHouseholdsMoe": 819,
+      "medianIncome": 137326,
+      "medianIncomeMoe": 2991,
+      "averageHouseholdSize": 2.62,
+      "povertyPct": 5.812310797174571,
+      "group": "A"
+    },
+    {
+      "county": "Ocean",
+      "fips": "34029",
+      "households": 243843,
+      "householdsMoe": 1514,
+      "povertyUniverse": 243843,
+      "povertyHouseholds": 22900,
+      "povertyHouseholdsMoe": 1329,
+      "medianIncome": 89863,
+      "medianIncomeMoe": 1555,
+      "averageHouseholdSize": 2.65,
+      "povertyPct": 9.391288657045722,
+      "group": "C"
+    },
+    {
+      "county": "Passaic",
+      "fips": "34031",
+      "households": 178936,
+      "householdsMoe": 778,
+      "povertyUniverse": 178936,
+      "povertyHouseholds": 24664,
+      "povertyHouseholdsMoe": 1440,
+      "medianIncome": 87522,
+      "medianIncomeMoe": 2333,
+      "averageHouseholdSize": 2.86,
+      "povertyPct": 13.783699199713864,
+      "group": "C"
+    },
+    {
+      "county": "Salem",
+      "fips": "34033",
+      "households": 24846,
+      "householdsMoe": 391,
+      "povertyUniverse": 24846,
+      "povertyHouseholds": 3080,
+      "povertyHouseholdsMoe": 364,
+      "medianIncome": 79960,
+      "medianIncomeMoe": 3982,
+      "averageHouseholdSize": 2.57,
+      "povertyPct": 12.39636158737825,
+      "group": "C"
+    },
+    {
+      "county": "Somerset",
+      "fips": "34035",
+      "households": 130802,
+      "householdsMoe": 435,
+      "povertyUniverse": 130802,
+      "povertyHouseholds": 7133,
+      "povertyHouseholdsMoe": 883,
+      "medianIncome": 140374,
+      "medianIncomeMoe": 3294,
+      "averageHouseholdSize": 2.64,
+      "povertyPct": 5.453280530878732,
+      "group": "A"
+    },
+    {
+      "county": "Sussex",
+      "fips": "34037",
+      "households": 57767,
+      "householdsMoe": 572,
+      "povertyUniverse": 57767,
+      "povertyHouseholds": 3244,
+      "povertyHouseholdsMoe": 417,
+      "medianIncome": 116186,
+      "medianIncomeMoe": 2466,
+      "averageHouseholdSize": 2.5,
+      "povertyPct": 5.615662921737324,
+      "group": "A"
+    },
+    {
+      "county": "Union",
+      "fips": "34039",
+      "households": 203277,
+      "householdsMoe": 863,
+      "povertyUniverse": 203277,
+      "povertyHouseholds": 18431,
+      "povertyHouseholdsMoe": 891,
+      "medianIncome": 103202,
+      "medianIncomeMoe": 2659,
+      "averageHouseholdSize": 2.82,
+      "povertyPct": 9.066938217309385,
+      "group": "A"
+    },
+    {
+      "county": "Warren",
+      "fips": "34041",
+      "households": 45391,
+      "householdsMoe": 321,
+      "povertyUniverse": 45391,
+      "povertyHouseholds": 3883,
+      "povertyHouseholdsMoe": 438,
+      "medianIncome": 100869,
+      "medianIncomeMoe": 3607,
+      "averageHouseholdSize": 2.4,
+      "povertyPct": 8.554559273864863,
+      "group": "B"
+    }
+  ],
+  "grouping": {
+    "method": "K-means clustering",
+    "k": 3,
+    "seed": 42,
+    "restarts": 40,
+    "inertia": 22.237077312748728,
+    "featureMeans": [
+      9.862099756950128,
+      11.525598112873016,
+      2.5785714285714283
+    ],
+    "featureScales": [
+      3.4413379372178032,
+      0.2009629046039912,
+      0.16295736264684796
+    ],
+    "standardizedCenters": [
+      [
+        -0.8346133769489565,
+        0.8663658091667739,
+        0.3217318357206846
+      ],
+      [
+        0.31043343696838815,
+        -0.3448114222958585,
+        -1.8117505735406283
+      ],
+      [
+        0.9268541823230523,
+        -0.9536529780974962,
+        0.27724167042688425
+      ]
+    ],
+    "features": [
+      "Household poverty percentage",
+      "Log median household income",
+      "Average household size"
+    ],
+    "groups": [
+      {
+        "id": "A",
+        "counties": [
+          "Bergen",
+          "Burlington",
+          "Gloucester",
+          "Hunterdon",
+          "Middlesex",
+          "Monmouth",
+          "Morris",
+          "Somerset",
+          "Sussex",
+          "Union"
+        ],
+        "households": 1840339,
+        "povertyPct": 7.448410320055164,
+        "meanCountyMedianIncome": 121330.7
+      },
+      {
+        "id": "B",
+        "counties": [
+          "Cape May",
+          "Hudson",
+          "Warren"
+        ],
+        "households": 389957,
+        "povertyPct": 13.369166343981515,
+        "meanCountyMedianIncome": 94597.33333333333
+      },
+      {
+        "id": "C",
+        "counties": [
+          "Atlantic",
+          "Camden",
+          "Cumberland",
+          "Essex",
+          "Mercer",
+          "Ocean",
+          "Passaic",
+          "Salem"
+        ],
+        "households": 1277405,
+        "povertyPct": 13.001514789749532,
+        "meanCountyMedianIncome": 84127.5
+      }
+    ]
+  },
+  "notes": [
+    "Five-year period estimates, not a count for June 2026. Fixed 2020\u20132024 reference for all county snapshot dates.",
+    "SNAP administrative households and ACS households have different definitions; their ratio is approximate.",
+    "Other program counts are families/cases, so ratios are units per 100 households, not the percent of households served.",
+    "Published household margins of error are 90% confidence margins. They do not include DFD reporting uncertainty.",
+    "Grouping uses Census features only, without participation data. Groups are exploratory and are not forecast inputs."
+  ]
+}

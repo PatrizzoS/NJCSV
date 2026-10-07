@@ -1,0 +1,219 @@
+{
+  "year": 2019,
+  "period": "2015\u20132019",
+  "availableFrom": "2021-03",
+  "sources": [
+    {
+      "table": "B11001",
+      "url": "https://www2.census.gov/programs-surveys/acs/summary_file/2019/prototype/5YRData/acsdt5y2019-b11001.dat",
+      "extractSha256": "2f876735a8d9ee4d160de8f044960245d931aeb1e659b7fe6e3b2cd6bda7b489"
+    },
+    {
+      "table": "B17017",
+      "url": "https://www2.census.gov/programs-surveys/acs/summary_file/2019/prototype/5YRData/acsdt5y2019-b17017.dat",
+      "extractSha256": "da76b971a2e9c86dfe849a4187f89084203736ad3f6795f7890e6c7bd7a4122e"
+    },
+    {
+      "table": "B19013",
+      "url": "https://www2.census.gov/programs-surveys/acs/summary_file/2019/prototype/5YRData/acsdt5y2019-b19013.dat",
+      "extractSha256": "119c9afc2c3ec0b03cd811879bf6948c9a447a065e6ed098f0c87e78f3920b25"
+    },
+    {
+      "table": "B25010",
+      "url": "https://www2.census.gov/programs-surveys/acs/summary_file/2019/prototype/5YRData/acsdt5y2019-b25010.dat",
+      "extractSha256": "d9fd75a021dc3074c81334d66d18d407e791767e35aad6b92a17804bc462298a"
+    }
+  ],
+  "counties": [
+    {
+      "fips": "34001",
+      "county": "Atlantic",
+      "households": 99850,
+      "householdsMoe": 1098,
+      "povertyPct": 12.767150726089133,
+      "medianIncome": 62110,
+      "averageHouseholdSize": 2.61
+    },
+    {
+      "fips": "34003",
+      "county": "Bergen",
+      "households": 339856,
+      "householdsMoe": 1049,
+      "povertyPct": 7.614695635798691,
+      "medianIncome": 101144,
+      "averageHouseholdSize": 2.71
+    },
+    {
+      "fips": "34005",
+      "county": "Burlington",
+      "households": 166391,
+      "householdsMoe": 1173,
+      "povertyPct": 5.821228311627432,
+      "medianIncome": 87416,
+      "averageHouseholdSize": 2.61
+    },
+    {
+      "fips": "34007",
+      "county": "Camden",
+      "households": 187383,
+      "householdsMoe": 1155,
+      "povertyPct": 12.430690083945715,
+      "medianIncome": 70451,
+      "averageHouseholdSize": 2.67
+    },
+    {
+      "fips": "34009",
+      "county": "Cape May",
+      "households": 40171,
+      "householdsMoe": 786,
+      "povertyPct": 9.489432675313036,
+      "medianIncome": 67074,
+      "averageHouseholdSize": 2.25
+    },
+    {
+      "fips": "34011",
+      "county": "Cumberland",
+      "households": 50729,
+      "householdsMoe": 583,
+      "povertyPct": 16.199806816613773,
+      "medianIncome": 54149,
+      "averageHouseholdSize": 2.74
+    },
+    {
+      "fips": "34013",
+      "county": "Essex",
+      "households": 285908,
+      "householdsMoe": 1230,
+      "povertyPct": 16.58190746673755,
+      "medianIncome": 61510,
+      "averageHouseholdSize": 2.71
+    },
+    {
+      "fips": "34015",
+      "county": "Gloucester",
+      "households": 104908,
+      "householdsMoe": 722,
+      "povertyPct": 7.321653258092805,
+      "medianIncome": 87283,
+      "averageHouseholdSize": 2.73
+    },
+    {
+      "fips": "34017",
+      "county": "Hudson",
+      "households": 258591,
+      "householdsMoe": 1183,
+      "povertyPct": 14.991240994466164,
+      "medianIncome": 71189,
+      "averageHouseholdSize": 2.56
+    },
+    {
+      "fips": "34019",
+      "county": "Hunterdon",
+      "households": 47175,
+      "householdsMoe": 460,
+      "povertyPct": 4.453630100688924,
+      "medianIncome": 115379,
+      "averageHouseholdSize": 2.56
+    },
+    {
+      "fips": "34021",
+      "county": "Mercer",
+      "households": 129936,
+      "householdsMoe": 1006,
+      "povertyPct": 11.4971986208595,
+      "medianIncome": 81057,
+      "averageHouseholdSize": 2.7
+    },
+    {
+      "fips": "34023",
+      "county": "Middlesex",
+      "households": 285005,
+      "householdsMoe": 1074,
+      "povertyPct": 8.613883966947949,
+      "medianIncome": 89533,
+      "averageHouseholdSize": 2.79
+    },
+    {
+      "fips": "34025",
+      "county": "Monmouth",
+      "households": 235362,
+      "householdsMoe": 1187,
+      "povertyPct": 7.489314332814983,
+      "medianIncome": 99733,
+      "averageHouseholdSize": 2.61
+    },
+    {
+      "fips": "34027",
+      "county": "Morris",
+      "households": 181884,
+      "householdsMoe": 1028,
+      "povertyPct": 5.068065360339557,
+      "medianIncome": 115527,
+      "averageHouseholdSize": 2.66
+    },
+    {
+      "fips": "34029",
+      "county": "Ocean",
+      "households": 226160,
+      "householdsMoe": 1486,
+      "povertyPct": 8.646975592500885,
+      "medianIncome": 70909,
+      "averageHouseholdSize": 2.61
+    },
+    {
+      "fips": "34031",
+      "county": "Passaic",
+      "households": 165429,
+      "householdsMoe": 813,
+      "povertyPct": 15.052983455137854,
+      "medianIncome": 69688,
+      "averageHouseholdSize": 2.99
+    },
+    {
+      "fips": "34033",
+      "county": "Salem",
+      "households": 23933,
+      "householdsMoe": 407,
+      "povertyPct": 11.912422178581874,
+      "medianIncome": 66842,
+      "averageHouseholdSize": 2.57
+    },
+    {
+      "fips": "34035",
+      "county": "Somerset",
+      "households": 118193,
+      "householdsMoe": 783,
+      "povertyPct": 5.458868122477642,
+      "medianIncome": 113611,
+      "averageHouseholdSize": 2.75
+    },
+    {
+      "fips": "34037",
+      "county": "Sussex",
+      "households": 53322,
+      "householdsMoe": 709,
+      "povertyPct": 4.917294925171599,
+      "medianIncome": 94520,
+      "averageHouseholdSize": 2.61
+    },
+    {
+      "fips": "34039",
+      "county": "Union",
+      "households": 190101,
+      "householdsMoe": 917,
+      "povertyPct": 9.585430902520239,
+      "medianIncome": 80198,
+      "averageHouseholdSize": 2.88
+    },
+    {
+      "fips": "34041",
+      "county": "Warren",
+      "households": 41587,
+      "householdsMoe": 513,
+      "povertyPct": 7.7908961935220145,
+      "medianIncome": 81307,
+      "averageHouseholdSize": 2.5
+    }
+  ],
+  "note": "The 2019 ACS release was published December 10, 2020. Validation conservatively uses this vintage from March 2021 onward; updated files may incorporate later revisions."
+}

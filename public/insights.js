@@ -1,0 +1,92 @@
+import {eaRatio,selectedValue,planningSignals,percentageChange} from './analytics.js';
+const $=id=>document.getElementById(id),n=new Intl.NumberFormat('en-US'),small=new Intl.NumberFormat('en-US',{notation:'compact',maximumFractionDigits:1});
+const dt=s=>new Date(s+'-01T00:00:00Z'),month=s=>dt(s).toLocaleDateString('en-US',{month:'short',year:'numeric',timeZone:'UTC'});
+const ratio=v=>v===null?'—':v.toFixed(1)+'%',pct=v=>v===null?'—':(v>=0?'+':'')+v.toFixed(1)+'%';
+const labels={tanf:'TANF EA / TANF',ga:'GA EA / GA',combined:'TANF + GA EA · blended ratio'};
+function responsive(el,draw,observe){draw();const observer=new ResizeObserver(draw);observer.observe(el);observe(observer);}
+export function eaSeries(data){
+ const maps=Object.fromEntries(['tanf','tanfEA','ga','gaEA'].map(id=>[id,new Map(data.programs.find(p=>p.id===id).observations.map(o=>[o.date,o.value]))]));
+ return [...maps.tanf.keys()].filter(date=>Object.values(maps).every(m=>m.has(date))).map(date=>({date,...eaRatio(...['tanf','tanfEA','ga','gaEA'].map(id=>maps[id].get(date)))}));
+}
+export function renderEAComparison({data,filtered,lineChart,colors,source}){
+ const all=eaSeries(data),shown=filtered(all,$('compare-range').value),last=all.at(-1);$('ea-charts').replaceChildren();
+ ['tanf','ga','combined'].forEach((key,i)=>{const el=document.createElement('article');el.innerHTML=`<h3>${labels[key]}</h3><strong class="mini-value">${ratio(last[key])}</strong><p>${month(last.date)}</p><div class="chart"></div>`;$('ea-charts').append(el);lineChart(el.querySelector('.chart'),[{name:labels[key],values:shown.filter(o=>o[key]!==null).map(o=>({date:o.date,value:o[key]})),color:colors[i+1]}],{unit:'Percent',height:215,mini:true});});
+ const obs=data.programs.find(p=>p.id==='tanfEA').observations.at(-1);
+ $('compare-notes').innerHTML=`${month(last.date)}: ${n.format(last.tanfEA)} TANF EA families / ${n.format(last.tanfCount)} TANF families; ${n.format(last.gaEA)} GA EA cases / ${n.format(last.gaCount)} GA cases. Combined: ${n.format(last.tanfEA+last.gaEA)} / ${n.format(last.tanfCount+last.gaCount)}. These are ratios of reported families and cases, not percentages of people. SSI EA is excluded. A zero denominator is undefined. <a href="${source(obs)}" target="_blank" rel="noopener">DFD EA source ↗</a> · July 2013 reporting source changed for SNAP, TANF and TANF EA.`;
+}
+export function renderCaseloadLines({data,counties,colors,filtered,observe,tip,hideTip,source}){
+ const series=data.programs.filter(p=>p.frequency==='monthly').map((p,i)=>({id:p.id,name:p.name,unit:p.unit,values:filtered(p.observations,$('compare-range').value),color:colors[i],dash:[null,null,'10 3 2 3','7 4','2 5'][i],large:p.id==='snap'}));
+ const child=counties.programs.find(p=>p.id==='childSupport');series.push({id:child.id,name:'Child Support · cases with orders',unit:child.unit,values:filtered(child.snapshots.map(s=>({...s,value:s.total})),$('compare-range').value),color:colors[5],dash:'12 4',large:true});
+ const dual=$('caseload-scale').value==='dual';
+ $('caseload-period').textContent=`Through ${month(data.asOf)}. ${dual?'Left: SNAP households and Child Support cases. Right: TANF families, GA cases and EA. Read each line against its assigned axis; heights across different axes do not compare program size.':'One shared scale for all program units.'} Time span follows the relative-change selector.`;
+ $('caseload-legend').innerHTML=series.map(s=>`<span><svg width="27" height="12" aria-hidden="true"><line x1="0" x2="27" y1="6" y2="6" stroke="${s.color}" stroke-width="3" stroke-dasharray="${s.dash||''}"/></svg>${s.name}${dual?' · '+(s.large?'left axis':'right axis'):''}</span>`).join('');
+ $('caseload-values').innerHTML=series.map(s=>`<div><span>${s.name}</span><strong>${n.format(s.values.at(-1).value)} ${s.unit.toLowerCase()}</strong><a href="${source(s.values.at(-1))}" target="_blank" rel="noopener">${month(s.values.at(-1).date)} · source ↗</a></div>`).join('');
+ const el=$('caseload-chart');responsive(el,()=>{
+  const width=el.clientWidth;if(!width)return;el.replaceChildren();const height=360,m={top:25,left:52,right:dual?52:20,bottom:38},w=width-m.left-m.right,h=height-m.top-m.bottom;
+  const svg=d3.select(el).append('svg').attr('viewBox',`0 0 ${width} ${height}`).attr('role','img').attr('aria-label','Participating program caseload over time, '+(dual?'two separate vertical scales':'one vertical scale'));
+  const g=svg.append('g').attr('transform',`translate(${m.left},${m.top})`),x=d3.scaleUtc().domain(d3.extent(series.flatMap(s=>s.values),o=>dt(o.date))).range([0,w]);
+  const scale=arr=>d3.scaleLinear().domain([0,(d3.max(arr.flatMap(s=>s.values),o=>o.value)||1)*1.08]).nice().range([h,0]);
+  const left=scale(dual?series.filter(s=>s.large):series),right=dual?scale(series.filter(s=>!s.large)):left;
+  g.append('g').attr('class','grid').call(d3.axisLeft(left).ticks(5).tickSize(-w).tickFormat(''));
+  g.append('g').attr('class','axis caseload-left-axis').call(d3.axisLeft(left).ticks(5).tickFormat(small.format));
+  if(dual)g.append('g').attr('class','axis caseload-right-axis').attr('transform',`translate(${w},0)`).call(d3.axisRight(right).ticks(5).tickFormat(small.format));
+  g.append('g').attr('class','axis').attr('transform',`translate(0,${h})`).call(d3.axisBottom(x).ticks(width<450?3:6).tickFormat(d3.utcFormat('%Y')));
+  for(const s of series){const y=s.large?left:right;g.append('path').datum(s.values).attr('class','series-line').attr('data-series',s.id).attr('fill','none').attr('stroke',s.color).attr('stroke-width',2.5).attr('stroke-dasharray',s.dash).attr('d',d3.line().x(o=>x(dt(o.date))).y(o=>y(o.value)));}
+  g.append('rect').attr('width',w).attr('height',h).attr('fill','transparent').on('pointermove',e=>{const at=x.invert(d3.pointer(e,g.node())[0]);const rows=series.filter(s=>at>=dt(s.values[0].date)&&at<=dt(s.values.at(-1).date)).map(s=>{const o=s.values[d3.bisector(o=>dt(o.date)).center(s.values,at)];return `<div>${s.name}: ${n.format(o.value)} ${s.unit.toLowerCase()} · ${month(o.date)}</div>`;});tip(e,rows.join(''));}).on('pointerleave',hideTip);
+ },observe);
+}
+export function renderCountyExtras({counties,censusState,censusCounty,countyName,countyDate,lineChart,colors,source,onCounty}){
+ const c=censusCounty(countyName),snap=counties.programs.find(p=>p.id==='snap').snapshots.find(s=>s.date===countyDate),snapCount=selectedValue(snap,countyName),share=100*snapCount/c.households;
+ $('household-waffle').dataset.share=String(share);
+ $('household-waffle').innerHTML=Array.from({length:100},(_,i)=>{const fill=Math.max(0,Math.min(1,share-i));return `<i data-fill="${fill}" style="background:linear-gradient(to right,${colors[0]} ${fill*100}%,var(--line) ${fill*100}%)"></i>`;}).join('');
+ $('household-share-story').textContent=`${countyName==='Total'?'New Jersey state total':countyName+' County'}: ${n.format(snapCount)} reported SNAP households in ${month(countyDate)}, compared with ${n.format(c.households)} estimated households. Approximate SNAP share: ${share.toFixed(2)}%. Each square represents one percentage point; partial shading preserves the fraction. Household reference: ACS 2020–2024. SNAP and Census household definitions differ.`;
+ const ids=['tanf','tanfEA','ga','gaEA'],snapshots=ids.map(id=>counties.programs.find(p=>p.id===id).snapshots.find(s=>s.date===countyDate));
+ const rows=['Total',...counties.counties].map(name=>({county:name,...eaRatio(...snapshots.map(s=>selectedValue(s,name)))}));
+ const own=rows.find(r=>r.county===countyName);$('county-ea-period').textContent=`${month(countyDate)} · New Jersey total and 21 counties. Color strength follows each column’s ratio.`;
+ const history=counties.programs.find(p=>p.id==='tanf').snapshots.map(s=>{const ss=ids.map(id=>counties.programs.find(p=>p.id===id).snapshots.find(x=>x.date===s.date));return {date:s.date,...eaRatio(...ss.map(x=>selectedValue(x,countyName)))};});
+ lineChart('county-ea-chart',['tanf','ga','combined'].map((key,i)=>({name:labels[key],values:history.filter(r=>r[key]!==null).map(r=>({date:r.date,value:r[key]})),color:colors[i+1],dash:i===2?'4 3':null})),{unit:'Percent',height:270,connectGap:3,endLabel:false});
+ $('county-ea-story').textContent=`${countyName==='Total'?'New Jersey state total':countyName}: TANF EA ${n.format(own.tanfEA)} / ${n.format(own.tanfCount)} = ${ratio(own.tanf)}; GA EA ${n.format(own.gaEA)} / ${n.format(own.gaCount)} = ${ratio(own.ga)}; blended ratio = ${ratio(own.combined)}. Ratios use administrative units, not unique people.`;
+ const maximum=Object.fromEntries(['tanf','ga','combined'].map(key=>[key,d3.max(rows,r=>r[key])||1]));
+ $('county-ea-table').innerHTML=`<table><caption>EA counts and ratios · ${month(countyDate)}</caption><thead><tr><th>County or total</th><th>TANF EA families</th><th>GA EA cases</th><th>TANF EA / TANF</th><th>GA EA / GA</th><th>Blended ratio</th></tr></thead><tbody>${rows.map(r=>`<tr class="${r.county===countyName?'selected-county':''}"><td><button type="button" data-ea-county="${r.county}">${r.county==='Total'?'New Jersey state total':r.county}</button></td><td>${n.format(r.tanfEA)}</td><td>${n.format(r.gaEA)}</td>${['tanf','ga','combined'].map(key=>`<td class="heat-cell" style="--heat:${r[key]===null?0:Math.min(.7,r[key]/maximum[key]*.7)}">${ratio(r[key])}</td>`).join('')}</tr>`).join('')}</tbody></table>`;
+ $('county-ea-table').querySelectorAll('button').forEach(b=>b.addEventListener('click',()=>onCounty(b.dataset.eaCounty)));
+ $('county-notes').innerHTML=`[1] <a href="${source(snapshots[1])}" target="_blank" rel="noopener">TANF EA county table · ${month(countyDate)} ↗</a>. [2] <a href="${source(snapshots[3])}" target="_blank" rel="noopener">GA and GA EA county table ↗</a>. [3] Blended ratio = (TANF EA families + GA EA cases) / (TANF families + GA cases) × 100. SSI EA is excluded. Undefined denominators show a dash. [4] <a href="https://data.census.gov/table/ACSDT5Y2024.B11001?g=040XX00US34" target="_blank" rel="noopener">NJ household total and county denominators · ACS 2020–2024 ↗</a>. Fixed period estimates are not monthly population counts.`;
+}
+let exportedSignals;
+export function downloadSignals(){if(!exportedSignals)return;const u=URL.createObjectURL(new Blob([JSON.stringify(exportedSignals,null,2)],{type:'application/json'}));const a=document.createElement('a');a.href=u;a.download='njcsv-planning-evidence.json';a.click();setTimeout(()=>URL.revokeObjectURL(u),1000);}
+export function renderCountyOutlook({countyModels,counties,p,colors,observe,tip,hideTip,onCounty,source}){
+ const m=countyModels.models[p.id],signals=planningSignals(m,Number($('signal-threshold').value)),threshold=Number($('signal-threshold').value),future=m.counties[0].forecast.at(-1).date;
+ const total=m.counties.reduce((sum,c)=>sum+c.forecast.at(-1).value,0),observed=m.counties.reduce((sum,c)=>sum+c.observed,0);
+ $('county-model-story').textContent=`${p.name}: ${n.format(observed)} published ${p.unit.toLowerCase()} in ${month(m.asOf)} → ${n.format(total)} projected in ${month(future)} (${pct(percentageChange(total,observed))}). This treemap reveals where changes could matter in absolute size: large counties occupy more space. Household inputs use ACS 2020–2024, available before this forecast origin.`;
+ const error=m.validation.censusErrorReductionPct;
+ $('county-model-accuracy').textContent=`Does Census improve past predictions? ${error>=0?'It reduced':'It increased'} this program’s average county prediction error by ${Math.abs(error).toFixed(1)}%, compared with the same model using only caseload history and seasonality. With Census: ${n.format(Math.round(m.validation.mae))} ${p.unit.toLowerCase()} average error; without: ${n.format(Math.round(m.validation.withoutCensusMae))}. Tested at eight past starting points × two quarters × 21 counties. The model uses ${m.trainingSamples} training examples; targets end ${month(m.trainingLastTarget)}. Extra demographic inputs help some programs and worsen others.`;
+ const el=$('county-treemap');responsive(el,()=>{
+  const width=el.clientWidth;if(!width)return;el.replaceChildren();const height=width<500?430:340;
+  const root=d3.hierarchy({children:m.counties}).sum(d=>d.observed||0).sort((a,b)=>b.value-a.value);d3.treemap().size([width,height]).padding(3)(root);
+  const surface=getComputedStyle(document.documentElement).getPropertyValue('--surface').trim();
+  const color=d3.scaleLinear().domain([-20,0,20]).range([d3.interpolateRgb(surface,colors[0])(.55),surface,d3.interpolateRgb(surface,colors[1])(.55)]).clamp(true);
+  const svg=d3.select(el).append('svg').attr('viewBox',`0 0 ${width} ${height}`).attr('role','group').attr('aria-label','County outlook treemap; equivalent evidence appears in the table below.');
+  for(const leaf of root.leaves()){const c=leaf.data,f=c.forecast.at(-1),growth=percentageChange(f.value,c.observed),group=svg.append('g').attr('transform',`translate(${leaf.x0},${leaf.y0})`).attr('data-outlook-county',c.county).attr('role','link').attr('tabindex',0).attr('aria-label',`${c.county}: ${n.format(c.observed)} observed, ${n.format(f.value)} projected, ${pct(growth)} change. Explore county.`).style('cursor','pointer');
+   group.append('rect').attr('width',leaf.x1-leaf.x0).attr('height',leaf.y1-leaf.y0).attr('fill',color(growth||0)).attr('stroke','var(--line)');
+   group.append('title').text(`${c.county}: ${n.format(c.observed)} → ${n.format(f.value)} (${pct(growth)}), error range ${n.format(f.lower)}–${n.format(f.upper)}`);
+   if(leaf.x1-leaf.x0>67&&leaf.y1-leaf.y0>35){group.append('text').attr('x',6).attr('y',18).attr('fill','var(--ink)').attr('font-size',11).attr('font-weight',600).text(c.county);if(leaf.y1-leaf.y0>51)group.append('text').attr('x',6).attr('y',34).attr('fill','var(--ink)').attr('font-size',11).text(pct(growth));}
+   group.on('pointermove',e=>tip(e,`<strong>${c.county} · ${month(f.date)}</strong><div>${n.format(c.observed)} → ${n.format(f.value)} ${p.unit.toLowerCase()} · ${pct(growth)}</div><div>Historical-error range: ${n.format(f.lower)}–${n.format(f.upper)}</div><div>${f.per100Households.toFixed(2)} units / 100 ACS households</div>`)).on('pointerleave',hideTip).on('click',()=>onCounty(c.county)).on('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();onCounty(c.county);}});
+  }
+ },observe);
+ $('threshold-value').textContent=threshold+'%';
+ const names={review_increase:'Review increase',review_decrease:'Review decrease',mixed_scenarios:'Mixed scenarios',insufficient_reference:'Insufficient reference'};
+ $('signal-summary').innerHTML=['review_increase','review_decrease','mixed_scenarios'].map(choice=>`<div class="stat"><div class="stat-label">${names[choice]}</div><div class="stat-value">${signals.filter(s=>s.choice===choice).length}</div><div class="stat-context">Counties · ${threshold}% change threshold</div></div>`).join('');
+ $('signal-table').innerHTML=`<table><caption>County outlook evidence · ${month(future)} · ${p.name}</caption><thead><tr><th>County</th><th>Published</th><th>Forecast</th><th>Projected change</th><th>Historical-error range</th><th>Increase scenarios</th><th>Decrease scenarios</th><th>Review signal</th></tr></thead><tbody>${signals.map(s=>`<tr><td><button type="button" data-signal-county="${s.county}">${s.county}</button></td><td>${n.format(s.observed)}</td><td>${n.format(s.projected)}</td><td>${pct(percentageChange(s.projected,s.observed))}</td><td>${n.format(s.lower)}–${n.format(s.upper)}</td><td>${s.increaseScenarios===null?'—':s.increaseScenarios+' / '+s.scenarioCount}</td><td>${s.decreaseScenarios===null?'—':s.decreaseScenarios+' / '+s.scenarioCount}</td><td>${names[s.choice]}</td></tr>`).join('')}</tbody></table>`;
+ $('signal-table').querySelectorAll('button').forEach(b=>b.addEventListener('click',()=>onCounty(b.dataset.signalCounty)));
+ exportedSignals={program:p.id,unit:p.unit,asOf:m.asOf,target:future,thresholdPct:threshold,model:m.model,features:m.features,censusYear:m.censusYear,trainingLastTarget:m.trainingLastTarget,validation:{origins:m.validation.origins,mae:m.validation.mae,withoutCensusMae:m.validation.withoutCensusMae},rule:'At least 6 of 8 error-adjusted scenarios beyond threshold',interpretation:'Scenario frequencies are not calibrated probabilities; review prompts only.',signals,sources:['/data/county-models.json','/data/counties.json','/data/census.json','/data/census-history.json']};
+ const cp=counties.programs.find(x=>x.id===p.id),junes=cp.snapshots.filter(s=>s.date.endsWith('-06')&&s.date>='2011-06'),calendar=$('county-calendar');
+ responsive(calendar,()=>{
+  calendar.replaceChildren();const width=Math.max(calendar.clientWidth,680),left=90,top=30,row=23,col=(width-left)/junes.length,height=top+counties.counties.length*row+10;
+  const surface=getComputedStyle(document.documentElement).getPropertyValue('--surface').trim();
+  const svg=d3.select(calendar).append('svg').attr('viewBox',`0 0 ${width} ${height}`).attr('role','group').attr('aria-label',`${p.name} county June year-over-year change calendar. Each cell can receive keyboard focus for its values.`),color=d3.scaleLinear().domain([-30,0,30]).range([colors[0],surface,colors[1]]).clamp(true);
+  junes.forEach((s,i)=>svg.append('text').attr('class','axis-title').attr('x',left+(i+.5)*col).attr('y',18).attr('text-anchor','middle').text(s.date.slice(2,4)));
+  counties.counties.forEach((name,r)=>{svg.append('text').attr('class','axis-title').attr('x',left-7).attr('y',top+r*row+15).attr('text-anchor','end').text(name);junes.forEach((s,i)=>{const prior=cp.snapshots.find(x=>x.date===`${Number(s.date.slice(0,4))-1}-06`),value=selectedValue(s,name),old=prior?selectedValue(prior,name):0,growth=percentageChange(value,old),desc=`${name} · June ${s.date.slice(0,4)}: ${n.format(value)} ${p.unit.toLowerCase()}, prior June ${n.format(old)}, change ${pct(growth)}`;
+   const cell=svg.append('rect').attr('data-calendar-cell',name+'-'+s.date).attr('x',left+i*col+1).attr('y',top+r*row+1).attr('width',col-2).attr('height',row-2).attr('fill',growth===null?'var(--line)':color(growth)).attr('tabindex',0).attr('role','img').attr('aria-label',desc);cell.append('title').text(desc);cell.on('pointermove',e=>tip(e,`<strong>${name} · ${month(s.date)}</strong><div>${n.format(old)} → ${n.format(value)} · ${pct(growth)}</div><div>Table ${s.table} · PDF page ${s.page}</div>`)).on('pointerleave',hideTip).on('focus',e=>{const r=e.target.getBoundingClientRect();tip({clientX:r.left,clientY:r.bottom},desc);}).on('blur',hideTip);
+  });});
+ },observe);
+}
+

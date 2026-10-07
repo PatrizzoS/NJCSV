@@ -1,0 +1,5150 @@
+{
+  "asOf": "2026-06",
+  "models": {
+    "snap": {
+      "model": "Ridge autoregression",
+      "alpha": 1,
+      "trainingWindow": 84,
+      "seasonalPeriod": 12,
+      "learnedWeights": [
+        {
+          "feature": "Previous month",
+          "coefficient": 0.05594961754902883
+        },
+        {
+          "feature": "2 months earlier",
+          "coefficient": 0.009552277630039392
+        },
+        {
+          "feature": "3 months earlier",
+          "coefficient": 0.012843329234572796
+        },
+        {
+          "feature": "6 months earlier",
+          "coefficient": -0.024117429611093727
+        },
+        {
+          "feature": "12 months earlier",
+          "coefficient": -0.0026745967017731643
+        },
+        {
+          "feature": "Recent 3-month average",
+          "coefficient": 0.026072825252508047
+        },
+        {
+          "feature": "Recent 12-month average",
+          "coefficient": 0.004346622498469489
+        },
+        {
+          "feature": "Annual seasonality \u00b7 sine",
+          "coefficient": 0.0013647830159850816
+        },
+        {
+          "feature": "Annual seasonality \u00b7 cosine",
+          "coefficient": 0.00015587492855567253
+        }
+      ],
+      "trainingTargets": 84,
+      "meanAbsolutePercentError": 1.362913061743988,
+      "trainingStart": "2019-07",
+      "trainingEnd": "2026-06",
+      "backtest": {
+        "originCount": 18,
+        "firstOrigin": "2024-07",
+        "lastOrigin": "2025-12",
+        "mae": 5846,
+        "baselineMae": 14906,
+        "improvementPct": 60.8,
+        "metrics": [
+          {
+            "horizon": 1,
+            "mae": 3577,
+            "baselineMae": 16876
+          },
+          {
+            "horizon": 2,
+            "mae": 4475,
+            "baselineMae": 15571
+          },
+          {
+            "horizon": 3,
+            "mae": 5159,
+            "baselineMae": 14855
+          },
+          {
+            "horizon": 4,
+            "mae": 6762,
+            "baselineMae": 14018
+          },
+          {
+            "horizon": 5,
+            "mae": 7133,
+            "baselineMae": 13637
+          },
+          {
+            "horizon": 6,
+            "mae": 7967,
+            "baselineMae": 14482
+          }
+        ],
+        "predictions": [
+          {
+            "origin": "2024-07",
+            "target": "2024-08",
+            "horizon": 1,
+            "actual": 450896,
+            "predicted": 446441,
+            "baseline": 410272
+          },
+          {
+            "origin": "2024-07",
+            "target": "2024-09",
+            "horizon": 2,
+            "actual": 444172,
+            "predicted": 445313,
+            "baseline": 409346
+          },
+          {
+            "origin": "2024-07",
+            "target": "2024-10",
+            "horizon": 3,
+            "actual": 447677,
+            "predicted": 444694,
+            "baseline": 411525
+          },
+          {
+            "origin": "2024-07",
+            "target": "2024-11",
+            "horizon": 4,
+            "actual": 447520,
+            "predicted": 443419,
+            "baseline": 416804
+          },
+          {
+            "origin": "2024-07",
+            "target": "2024-12",
+            "horizon": 5,
+            "actual": 443200,
+            "predicted": 441103,
+            "baseline": 425954
+          },
+          {
+            "origin": "2024-07",
+            "target": "2025-01",
+            "horizon": 6,
+            "actual": 438426,
+            "predicted": 440344,
+            "baseline": 425531
+          },
+          {
+            "origin": "2024-08",
+            "target": "2024-09",
+            "horizon": 1,
+            "actual": 444172,
+            "predicted": 448602,
+            "baseline": 409346
+          },
+          {
+            "origin": "2024-08",
+            "target": "2024-10",
+            "horizon": 2,
+            "actual": 447677,
+            "predicted": 448336,
+            "baseline": 411525
+          },
+          {
+            "origin": "2024-08",
+            "target": "2024-11",
+            "horizon": 3,
+            "actual": 447520,
+            "predicted": 447979,
+            "baseline": 416804
+          },
+          {
+            "origin": "2024-08",
+            "target": "2024-12",
+            "horizon": 4,
+            "actual": 443200,
+            "predicted": 446085,
+            "baseline": 425954
+          },
+          {
+            "origin": "2024-08",
+            "target": "2025-01",
+            "horizon": 5,
+            "actual": 438426,
+            "predicted": 445947,
+            "baseline": 425531
+          },
+          {
+            "origin": "2024-08",
+            "target": "2025-02",
+            "horizon": 6,
+            "actual": 437155,
+            "predicted": 443886,
+            "baseline": 428345
+          },
+          {
+            "origin": "2024-09",
+            "target": "2024-10",
+            "horizon": 1,
+            "actual": 447677,
+            "predicted": 444992,
+            "baseline": 411525
+          },
+          {
+            "origin": "2024-09",
+            "target": "2024-11",
+            "horizon": 2,
+            "actual": 447520,
+            "predicted": 444223,
+            "baseline": 416804
+          },
+          {
+            "origin": "2024-09",
+            "target": "2024-12",
+            "horizon": 3,
+            "actual": 443200,
+            "predicted": 441405,
+            "baseline": 425954
+          },
+          {
+            "origin": "2024-09",
+            "target": "2025-01",
+            "horizon": 4,
+            "actual": 438426,
+            "predicted": 440820,
+            "baseline": 425531
+          },
+          {
+            "origin": "2024-09",
+            "target": "2025-02",
+            "horizon": 5,
+            "actual": 437155,
+            "predicted": 438146,
+            "baseline": 428345
+          },
+          {
+            "origin": "2024-09",
+            "target": "2025-03",
+            "horizon": 6,
+            "actual": 437363,
+            "predicted": 437106,
+            "baseline": 439046
+          },
+          {
+            "origin": "2024-10",
+            "target": "2024-11",
+            "horizon": 1,
+            "actual": 447520,
+            "predicted": 446294,
+            "baseline": 416804
+          },
+          {
+            "origin": "2024-10",
+            "target": "2024-12",
+            "horizon": 2,
+            "actual": 443200,
+            "predicted": 443748,
+            "baseline": 425954
+          },
+          {
+            "origin": "2024-10",
+            "target": "2025-01",
+            "horizon": 3,
+            "actual": 438426,
+            "predicted": 443735,
+            "baseline": 425531
+          },
+          {
+            "origin": "2024-10",
+            "target": "2025-02",
+            "horizon": 4,
+            "actual": 437155,
+            "predicted": 441328,
+            "baseline": 428345
+          },
+          {
+            "origin": "2024-10",
+            "target": "2025-03",
+            "horizon": 5,
+            "actual": 437363,
+            "predicted": 440665,
+            "baseline": 439046
+          },
+          {
+            "origin": "2024-10",
+            "target": "2025-04",
+            "horizon": 6,
+            "actual": 433104,
+            "predicted": 438635,
+            "baseline": 438227
+          },
+          {
+            "origin": "2024-11",
+            "target": "2024-12",
+            "horizon": 1,
+            "actual": 443200,
+            "predicted": 444661,
+            "baseline": 425954
+          },
+          {
+            "origin": "2024-11",
+            "target": "2025-01",
+            "horizon": 2,
+            "actual": 438426,
+            "predicted": 444760,
+            "baseline": 425531
+          },
+          {
+            "origin": "2024-11",
+            "target": "2025-02",
+            "horizon": 3,
+            "actual": 437155,
+            "predicted": 442608,
+            "baseline": 428345
+          },
+          {
+            "origin": "2024-11",
+            "target": "2025-03",
+            "horizon": 4,
+            "actual": 437363,
+            "predicted": 442062,
+            "baseline": 439046
+          },
+          {
+            "origin": "2024-11",
+            "target": "2025-04",
+            "horizon": 5,
+            "actual": 433104,
+            "predicted": 440201,
+            "baseline": 438227
+          },
+          {
+            "origin": "2024-11",
+            "target": "2025-05",
+            "horizon": 6,
+            "actual": 441199,
+            "predicted": 437947,
+            "baseline": 442979
+          },
+          {
+            "origin": "2024-12",
+            "target": "2025-01",
+            "horizon": 1,
+            "actual": 438426,
+            "predicted": 443616,
+            "baseline": 425531
+          },
+          {
+            "origin": "2024-12",
+            "target": "2025-02",
+            "horizon": 2,
+            "actual": 437155,
+            "predicted": 441319,
+            "baseline": 428345
+          },
+          {
+            "origin": "2024-12",
+            "target": "2025-03",
+            "horizon": 3,
+            "actual": 437363,
+            "predicted": 440452,
+            "baseline": 439046
+          },
+          {
+            "origin": "2024-12",
+            "target": "2025-04",
+            "horizon": 4,
+            "actual": 433104,
+            "predicted": 438446,
+            "baseline": 438227
+          },
+          {
+            "origin": "2024-12",
+            "target": "2025-05",
+            "horizon": 5,
+            "actual": 441199,
+            "predicted": 435997,
+            "baseline": 442979
+          },
+          {
+            "origin": "2024-12",
+            "target": "2025-06",
+            "horizon": 6,
+            "actual": 435351,
+            "predicted": 434166,
+            "baseline": 447612
+          },
+          {
+            "origin": "2025-01",
+            "target": "2025-02",
+            "horizon": 1,
+            "actual": 437155,
+            "predicted": 437639,
+            "baseline": 428345
+          },
+          {
+            "origin": "2025-01",
+            "target": "2025-03",
+            "horizon": 2,
+            "actual": 437363,
+            "predicted": 436417,
+            "baseline": 439046
+          },
+          {
+            "origin": "2025-01",
+            "target": "2025-04",
+            "horizon": 3,
+            "actual": 433104,
+            "predicted": 433420,
+            "baseline": 438227
+          },
+          {
+            "origin": "2025-01",
+            "target": "2025-05",
+            "horizon": 4,
+            "actual": 441199,
+            "predicted": 430525,
+            "baseline": 442979
+          },
+          {
+            "origin": "2025-01",
+            "target": "2025-06",
+            "horizon": 5,
+            "actual": 435351,
+            "predicted": 428029,
+            "baseline": 447612
+          },
+          {
+            "origin": "2025-01",
+            "target": "2025-07",
+            "horizon": 6,
+            "actual": 426161,
+            "predicted": 425754,
+            "baseline": 444351
+          },
+          {
+            "origin": "2025-02",
+            "target": "2025-03",
+            "horizon": 1,
+            "actual": 437363,
+            "predicted": 436201,
+            "baseline": 439046
+          },
+          {
+            "origin": "2025-02",
+            "target": "2025-04",
+            "horizon": 2,
+            "actual": 433104,
+            "predicted": 433226,
+            "baseline": 438227
+          },
+          {
+            "origin": "2025-02",
+            "target": "2025-05",
+            "horizon": 3,
+            "actual": 441199,
+            "predicted": 430277,
+            "baseline": 442979
+          },
+          {
+            "origin": "2025-02",
+            "target": "2025-06",
+            "horizon": 4,
+            "actual": 435351,
+            "predicted": 427766,
+            "baseline": 447612
+          },
+          {
+            "origin": "2025-02",
+            "target": "2025-07",
+            "horizon": 5,
+            "actual": 426161,
+            "predicted": 425432,
+            "baseline": 444351
+          },
+          {
+            "origin": "2025-02",
+            "target": "2025-08",
+            "horizon": 6,
+            "actual": 436452,
+            "predicted": 422269,
+            "baseline": 450896
+          },
+          {
+            "origin": "2025-03",
+            "target": "2025-04",
+            "horizon": 1,
+            "actual": 433104,
+            "predicted": 434090,
+            "baseline": 438227
+          },
+          {
+            "origin": "2025-03",
+            "target": "2025-05",
+            "horizon": 2,
+            "actual": 441199,
+            "predicted": 431244,
+            "baseline": 442979
+          },
+          {
+            "origin": "2025-03",
+            "target": "2025-06",
+            "horizon": 3,
+            "actual": 435351,
+            "predicted": 428963,
+            "baseline": 447612
+          },
+          {
+            "origin": "2025-03",
+            "target": "2025-07",
+            "horizon": 4,
+            "actual": 426161,
+            "predicted": 426735,
+            "baseline": 444351
+          },
+          {
+            "origin": "2025-03",
+            "target": "2025-08",
+            "horizon": 5,
+            "actual": 436452,
+            "predicted": 423720,
+            "baseline": 450896
+          },
+          {
+            "origin": "2025-03",
+            "target": "2025-09",
+            "horizon": 6,
+            "actual": 432257,
+            "predicted": 420471,
+            "baseline": 444172
+          },
+          {
+            "origin": "2025-04",
+            "target": "2025-05",
+            "horizon": 1,
+            "actual": 441199,
+            "predicted": 430760,
+            "baseline": 442979
+          },
+          {
+            "origin": "2025-04",
+            "target": "2025-06",
+            "horizon": 2,
+            "actual": 435351,
+            "predicted": 428516,
+            "baseline": 447612
+          },
+          {
+            "origin": "2025-04",
+            "target": "2025-07",
+            "horizon": 3,
+            "actual": 426161,
+            "predicted": 426150,
+            "baseline": 444351
+          },
+          {
+            "origin": "2025-04",
+            "target": "2025-08",
+            "horizon": 4,
+            "actual": 436452,
+            "predicted": 423099,
+            "baseline": 450896
+          },
+          {
+            "origin": "2025-04",
+            "target": "2025-09",
+            "horizon": 5,
+            "actual": 432257,
+            "predicted": 419733,
+            "baseline": 444172
+          },
+          {
+            "origin": "2025-04",
+            "target": "2025-10",
+            "horizon": 6,
+            "actual": 434111,
+            "predicted": 417025,
+            "baseline": 447677
+          },
+          {
+            "origin": "2025-05",
+            "target": "2025-06",
+            "horizon": 1,
+            "actual": 435351,
+            "predicted": 436274,
+            "baseline": 447612
+          },
+          {
+            "origin": "2025-05",
+            "target": "2025-07",
+            "horizon": 2,
+            "actual": 426161,
+            "predicted": 434838,
+            "baseline": 444351
+          },
+          {
+            "origin": "2025-05",
+            "target": "2025-08",
+            "horizon": 3,
+            "actual": 436452,
+            "predicted": 433809,
+            "baseline": 450896
+          },
+          {
+            "origin": "2025-05",
+            "target": "2025-09",
+            "horizon": 4,
+            "actual": 432257,
+            "predicted": 431343,
+            "baseline": 444172
+          },
+          {
+            "origin": "2025-05",
+            "target": "2025-10",
+            "horizon": 5,
+            "actual": 434111,
+            "predicted": 429913,
+            "baseline": 447677
+          },
+          {
+            "origin": "2025-05",
+            "target": "2025-11",
+            "horizon": 6,
+            "actual": 430862,
+            "predicted": 426236,
+            "baseline": 447520
+          },
+          {
+            "origin": "2025-06",
+            "target": "2025-07",
+            "horizon": 1,
+            "actual": 426161,
+            "predicted": 434143,
+            "baseline": 444351
+          },
+          {
+            "origin": "2025-06",
+            "target": "2025-08",
+            "horizon": 2,
+            "actual": 436452,
+            "predicted": 433015,
+            "baseline": 450896
+          },
+          {
+            "origin": "2025-06",
+            "target": "2025-09",
+            "horizon": 3,
+            "actual": 432257,
+            "predicted": 430371,
+            "baseline": 444172
+          },
+          {
+            "origin": "2025-06",
+            "target": "2025-10",
+            "horizon": 4,
+            "actual": 434111,
+            "predicted": 428861,
+            "baseline": 447677
+          },
+          {
+            "origin": "2025-06",
+            "target": "2025-11",
+            "horizon": 5,
+            "actual": 430862,
+            "predicted": 425076,
+            "baseline": 447520
+          },
+          {
+            "origin": "2025-06",
+            "target": "2025-12",
+            "horizon": 6,
+            "actual": 430099,
+            "predicted": 423475,
+            "baseline": 443200
+          },
+          {
+            "origin": "2025-07",
+            "target": "2025-08",
+            "horizon": 1,
+            "actual": 436452,
+            "predicted": 427333,
+            "baseline": 450896
+          },
+          {
+            "origin": "2025-07",
+            "target": "2025-09",
+            "horizon": 2,
+            "actual": 432257,
+            "predicted": 424168,
+            "baseline": 444172
+          },
+          {
+            "origin": "2025-07",
+            "target": "2025-10",
+            "horizon": 3,
+            "actual": 434111,
+            "predicted": 421114,
+            "baseline": 447677
+          },
+          {
+            "origin": "2025-07",
+            "target": "2025-11",
+            "horizon": 4,
+            "actual": 430862,
+            "predicted": 416744,
+            "baseline": 447520
+          },
+          {
+            "origin": "2025-07",
+            "target": "2025-12",
+            "horizon": 5,
+            "actual": 430099,
+            "predicted": 414165,
+            "baseline": 443200
+          },
+          {
+            "origin": "2025-07",
+            "target": "2026-01",
+            "horizon": 6,
+            "actual": 424644,
+            "predicted": 413389,
+            "baseline": 438426
+          },
+          {
+            "origin": "2025-08",
+            "target": "2025-09",
+            "horizon": 1,
+            "actual": 432257,
+            "predicted": 430790,
+            "baseline": 444172
+          },
+          {
+            "origin": "2025-08",
+            "target": "2025-10",
+            "horizon": 2,
+            "actual": 434111,
+            "predicted": 428427,
+            "baseline": 447677
+          },
+          {
+            "origin": "2025-08",
+            "target": "2025-11",
+            "horizon": 3,
+            "actual": 430862,
+            "predicted": 425817,
+            "baseline": 447520
+          },
+          {
+            "origin": "2025-08",
+            "target": "2025-12",
+            "horizon": 4,
+            "actual": 430099,
+            "predicted": 423978,
+            "baseline": 443200
+          },
+          {
+            "origin": "2025-08",
+            "target": "2026-01",
+            "horizon": 5,
+            "actual": 424644,
+            "predicted": 424329,
+            "baseline": 438426
+          },
+          {
+            "origin": "2025-08",
+            "target": "2026-02",
+            "horizon": 6,
+            "actual": 420026,
+            "predicted": 421440,
+            "baseline": 437155
+          },
+          {
+            "origin": "2025-09",
+            "target": "2025-10",
+            "horizon": 1,
+            "actual": 434111,
+            "predicted": 429479,
+            "baseline": 447677
+          },
+          {
+            "origin": "2025-09",
+            "target": "2025-11",
+            "horizon": 2,
+            "actual": 430862,
+            "predicted": 426981,
+            "baseline": 447520
+          },
+          {
+            "origin": "2025-09",
+            "target": "2025-12",
+            "horizon": 3,
+            "actual": 430099,
+            "predicted": 425427,
+            "baseline": 443200
+          },
+          {
+            "origin": "2025-09",
+            "target": "2026-01",
+            "horizon": 4,
+            "actual": 424644,
+            "predicted": 425897,
+            "baseline": 438426
+          },
+          {
+            "origin": "2025-09",
+            "target": "2026-02",
+            "horizon": 5,
+            "actual": 420026,
+            "predicted": 423180,
+            "baseline": 437155
+          },
+          {
+            "origin": "2025-09",
+            "target": "2026-03",
+            "horizon": 6,
+            "actual": 415431,
+            "predicted": 422448,
+            "baseline": 437363
+          },
+          {
+            "origin": "2025-10",
+            "target": "2025-11",
+            "horizon": 1,
+            "actual": 430862,
+            "predicted": 430441,
+            "baseline": 447520
+          },
+          {
+            "origin": "2025-10",
+            "target": "2025-12",
+            "horizon": 2,
+            "actual": 430099,
+            "predicted": 429297,
+            "baseline": 443200
+          },
+          {
+            "origin": "2025-10",
+            "target": "2026-01",
+            "horizon": 3,
+            "actual": 424644,
+            "predicted": 430703,
+            "baseline": 438426
+          },
+          {
+            "origin": "2025-10",
+            "target": "2026-02",
+            "horizon": 4,
+            "actual": 420026,
+            "predicted": 428333,
+            "baseline": 437155
+          },
+          {
+            "origin": "2025-10",
+            "target": "2026-03",
+            "horizon": 5,
+            "actual": 415431,
+            "predicted": 428142,
+            "baseline": 437363
+          },
+          {
+            "origin": "2025-10",
+            "target": "2026-04",
+            "horizon": 6,
+            "actual": 412019,
+            "predicted": 427389,
+            "baseline": 433104
+          },
+          {
+            "origin": "2025-11",
+            "target": "2025-12",
+            "horizon": 1,
+            "actual": 430099,
+            "predicted": 429745,
+            "baseline": 443200
+          },
+          {
+            "origin": "2025-11",
+            "target": "2026-01",
+            "horizon": 2,
+            "actual": 424644,
+            "predicted": 431240,
+            "baseline": 438426
+          },
+          {
+            "origin": "2025-11",
+            "target": "2026-02",
+            "horizon": 3,
+            "actual": 420026,
+            "predicted": 428952,
+            "baseline": 437155
+          },
+          {
+            "origin": "2025-11",
+            "target": "2026-03",
+            "horizon": 4,
+            "actual": 415431,
+            "predicted": 428795,
+            "baseline": 437363
+          },
+          {
+            "origin": "2025-11",
+            "target": "2026-04",
+            "horizon": 5,
+            "actual": 412019,
+            "predicted": 428058,
+            "baseline": 433104
+          },
+          {
+            "origin": "2025-11",
+            "target": "2026-05",
+            "horizon": 6,
+            "actual": 417336,
+            "predicted": 427502,
+            "baseline": 441199
+          },
+          {
+            "origin": "2025-12",
+            "target": "2026-01",
+            "horizon": 1,
+            "actual": 424644,
+            "predicted": 431623,
+            "baseline": 438426
+          },
+          {
+            "origin": "2025-12",
+            "target": "2026-02",
+            "horizon": 2,
+            "actual": 420026,
+            "predicted": 429414,
+            "baseline": 437155
+          },
+          {
+            "origin": "2025-12",
+            "target": "2026-03",
+            "horizon": 3,
+            "actual": 415431,
+            "predicted": 429333,
+            "baseline": 437363
+          },
+          {
+            "origin": "2025-12",
+            "target": "2026-04",
+            "horizon": 4,
+            "actual": 412019,
+            "predicted": 428619,
+            "baseline": 433104
+          },
+          {
+            "origin": "2025-12",
+            "target": "2026-05",
+            "horizon": 5,
+            "actual": 417336,
+            "predicted": 428085,
+            "baseline": 441199
+          },
+          {
+            "origin": "2025-12",
+            "target": "2026-06",
+            "horizon": 6,
+            "actual": 402893,
+            "predicted": 427497,
+            "baseline": 435351
+          }
+        ]
+      },
+      "forecast": [
+        {
+          "date": "2026-07",
+          "value": 403571,
+          "lower": 398308,
+          "upper": 409197
+        },
+        {
+          "date": "2026-08",
+          "value": 402911,
+          "lower": 396184,
+          "upper": 409714
+        },
+        {
+          "date": "2026-09",
+          "value": 400282,
+          "lower": 393839,
+          "upper": 407498
+        },
+        {
+          "date": "2026-10",
+          "value": 399217,
+          "lower": 390059,
+          "upper": 409923
+        },
+        {
+          "date": "2026-11",
+          "value": 396803,
+          "lower": 386294,
+          "upper": 408668
+        },
+        {
+          "date": "2026-12",
+          "value": 397955,
+          "lower": 387031,
+          "upper": 409772
+        }
+      ],
+      "anomalies": [
+        {
+          "date": "2019-02",
+          "value": 335460,
+          "expected": 356037,
+          "score": -5.6,
+          "direction": "below"
+        },
+        {
+          "date": "2019-03",
+          "value": 351783,
+          "expected": 341544,
+          "score": 4.02,
+          "direction": "above"
+        },
+        {
+          "date": "2020-04",
+          "value": 348149,
+          "expected": 333592,
+          "score": 5.65,
+          "direction": "above"
+        },
+        {
+          "date": "2020-05",
+          "value": 365511,
+          "expected": 340515,
+          "score": 8.81,
+          "direction": "above"
+        },
+        {
+          "date": "2020-06",
+          "value": 369824,
+          "expected": 358036,
+          "score": 3.93,
+          "direction": "above"
+        },
+        {
+          "date": "2022-05",
+          "value": 434341,
+          "expected": 455662,
+          "score": -4.01,
+          "direction": "below"
+        },
+        {
+          "date": "2022-08",
+          "value": 434352,
+          "expected": 407299,
+          "score": 4.55,
+          "direction": "above"
+        }
+      ]
+    },
+    "tanf": {
+      "model": "Ridge autoregression",
+      "alpha": 1,
+      "trainingWindow": 84,
+      "seasonalPeriod": 12,
+      "learnedWeights": [
+        {
+          "feature": "Previous month",
+          "coefficient": 0.08280928742784262
+        },
+        {
+          "feature": "2 months earlier",
+          "coefficient": 0.007149243489353951
+        },
+        {
+          "feature": "3 months earlier",
+          "coefficient": -0.025236425296789395
+        },
+        {
+          "feature": "6 months earlier",
+          "coefficient": -0.0033195425671569264
+        },
+        {
+          "feature": "12 months earlier",
+          "coefficient": -0.0006734108147626107
+        },
+        {
+          "feature": "Recent 3-month average",
+          "coefficient": 0.023108280824164492
+        },
+        {
+          "feature": "Recent 12-month average",
+          "coefficient": -0.002258005238923894
+        },
+        {
+          "feature": "Annual seasonality \u00b7 sine",
+          "coefficient": -0.0005669823013136975
+        },
+        {
+          "feature": "Annual seasonality \u00b7 cosine",
+          "coefficient": -9.382234849256011e-05
+        }
+      ],
+      "trainingTargets": 84,
+      "meanAbsolutePercentError": 5.26823925006827,
+      "trainingStart": "2019-07",
+      "trainingEnd": "2026-06",
+      "backtest": {
+        "originCount": 18,
+        "firstOrigin": "2024-07",
+        "lastOrigin": "2025-12",
+        "mae": 506,
+        "baselineMae": 1454,
+        "improvementPct": 65.2,
+        "metrics": [
+          {
+            "horizon": 1,
+            "mae": 133,
+            "baselineMae": 1260
+          },
+          {
+            "horizon": 2,
+            "mae": 238,
+            "baselineMae": 1344
+          },
+          {
+            "horizon": 3,
+            "mae": 393,
+            "baselineMae": 1426
+          },
+          {
+            "horizon": 4,
+            "mae": 572,
+            "baselineMae": 1513
+          },
+          {
+            "horizon": 5,
+            "mae": 756,
+            "baselineMae": 1574
+          },
+          {
+            "horizon": 6,
+            "mae": 942,
+            "baselineMae": 1607
+          }
+        ],
+        "predictions": [
+          {
+            "origin": "2024-07",
+            "target": "2024-08",
+            "horizon": 1,
+            "actual": 11646,
+            "predicted": 11602,
+            "baseline": 11304
+          },
+          {
+            "origin": "2024-07",
+            "target": "2024-09",
+            "horizon": 2,
+            "actual": 11514,
+            "predicted": 11558,
+            "baseline": 11254
+          },
+          {
+            "origin": "2024-07",
+            "target": "2024-10",
+            "horizon": 3,
+            "actual": 11563,
+            "predicted": 11524,
+            "baseline": 11522
+          },
+          {
+            "origin": "2024-07",
+            "target": "2024-11",
+            "horizon": 4,
+            "actual": 11457,
+            "predicted": 11483,
+            "baseline": 11748
+          },
+          {
+            "origin": "2024-07",
+            "target": "2024-12",
+            "horizon": 5,
+            "actual": 11277,
+            "predicted": 11438,
+            "baseline": 11861
+          },
+          {
+            "origin": "2024-07",
+            "target": "2025-01",
+            "horizon": 6,
+            "actual": 11028,
+            "predicted": 11388,
+            "baseline": 11800
+          },
+          {
+            "origin": "2024-08",
+            "target": "2024-09",
+            "horizon": 1,
+            "actual": 11514,
+            "predicted": 11593,
+            "baseline": 11254
+          },
+          {
+            "origin": "2024-08",
+            "target": "2024-10",
+            "horizon": 2,
+            "actual": 11563,
+            "predicted": 11561,
+            "baseline": 11522
+          },
+          {
+            "origin": "2024-08",
+            "target": "2024-11",
+            "horizon": 3,
+            "actual": 11457,
+            "predicted": 11518,
+            "baseline": 11748
+          },
+          {
+            "origin": "2024-08",
+            "target": "2024-12",
+            "horizon": 4,
+            "actual": 11277,
+            "predicted": 11475,
+            "baseline": 11861
+          },
+          {
+            "origin": "2024-08",
+            "target": "2025-01",
+            "horizon": 5,
+            "actual": 11028,
+            "predicted": 11426,
+            "baseline": 11800
+          },
+          {
+            "origin": "2024-08",
+            "target": "2025-02",
+            "horizon": 6,
+            "actual": 10877,
+            "predicted": 11371,
+            "baseline": 11721
+          },
+          {
+            "origin": "2024-09",
+            "target": "2024-10",
+            "horizon": 1,
+            "actual": 11563,
+            "predicted": 11478,
+            "baseline": 11522
+          },
+          {
+            "origin": "2024-09",
+            "target": "2024-11",
+            "horizon": 2,
+            "actual": 11457,
+            "predicted": 11419,
+            "baseline": 11748
+          },
+          {
+            "origin": "2024-09",
+            "target": "2024-12",
+            "horizon": 3,
+            "actual": 11277,
+            "predicted": 11373,
+            "baseline": 11861
+          },
+          {
+            "origin": "2024-09",
+            "target": "2025-01",
+            "horizon": 4,
+            "actual": 11028,
+            "predicted": 11323,
+            "baseline": 11800
+          },
+          {
+            "origin": "2024-09",
+            "target": "2025-02",
+            "horizon": 5,
+            "actual": 10877,
+            "predicted": 11270,
+            "baseline": 11721
+          },
+          {
+            "origin": "2024-09",
+            "target": "2025-03",
+            "horizon": 6,
+            "actual": 10663,
+            "predicted": 11227,
+            "baseline": 11862
+          },
+          {
+            "origin": "2024-10",
+            "target": "2024-11",
+            "horizon": 1,
+            "actual": 11457,
+            "predicted": 11495,
+            "baseline": 11748
+          },
+          {
+            "origin": "2024-10",
+            "target": "2024-12",
+            "horizon": 2,
+            "actual": 11277,
+            "predicted": 11457,
+            "baseline": 11861
+          },
+          {
+            "origin": "2024-10",
+            "target": "2025-01",
+            "horizon": 3,
+            "actual": 11028,
+            "predicted": 11405,
+            "baseline": 11800
+          },
+          {
+            "origin": "2024-10",
+            "target": "2025-02",
+            "horizon": 4,
+            "actual": 10877,
+            "predicted": 11355,
+            "baseline": 11721
+          },
+          {
+            "origin": "2024-10",
+            "target": "2025-03",
+            "horizon": 5,
+            "actual": 10663,
+            "predicted": 11313,
+            "baseline": 11862
+          },
+          {
+            "origin": "2024-10",
+            "target": "2025-04",
+            "horizon": 6,
+            "actual": 10292,
+            "predicted": 11268,
+            "baseline": 11747
+          },
+          {
+            "origin": "2024-11",
+            "target": "2024-12",
+            "horizon": 1,
+            "actual": 11277,
+            "predicted": 11407,
+            "baseline": 11861
+          },
+          {
+            "origin": "2024-11",
+            "target": "2025-01",
+            "horizon": 2,
+            "actual": 11028,
+            "predicted": 11342,
+            "baseline": 11800
+          },
+          {
+            "origin": "2024-11",
+            "target": "2025-02",
+            "horizon": 3,
+            "actual": 10877,
+            "predicted": 11289,
+            "baseline": 11721
+          },
+          {
+            "origin": "2024-11",
+            "target": "2025-03",
+            "horizon": 4,
+            "actual": 10663,
+            "predicted": 11246,
+            "baseline": 11862
+          },
+          {
+            "origin": "2024-11",
+            "target": "2025-04",
+            "horizon": 5,
+            "actual": 10292,
+            "predicted": 11207,
+            "baseline": 11747
+          },
+          {
+            "origin": "2024-11",
+            "target": "2025-05",
+            "horizon": 6,
+            "actual": 10155,
+            "predicted": 11178,
+            "baseline": 11736
+          },
+          {
+            "origin": "2024-12",
+            "target": "2025-01",
+            "horizon": 1,
+            "actual": 11028,
+            "predicted": 11209,
+            "baseline": 11800
+          },
+          {
+            "origin": "2024-12",
+            "target": "2025-02",
+            "horizon": 2,
+            "actual": 10877,
+            "predicted": 11135,
+            "baseline": 11721
+          },
+          {
+            "origin": "2024-12",
+            "target": "2025-03",
+            "horizon": 3,
+            "actual": 10663,
+            "predicted": 11092,
+            "baseline": 11862
+          },
+          {
+            "origin": "2024-12",
+            "target": "2025-04",
+            "horizon": 4,
+            "actual": 10292,
+            "predicted": 11055,
+            "baseline": 11747
+          },
+          {
+            "origin": "2024-12",
+            "target": "2025-05",
+            "horizon": 5,
+            "actual": 10155,
+            "predicted": 11032,
+            "baseline": 11736
+          },
+          {
+            "origin": "2024-12",
+            "target": "2025-06",
+            "horizon": 6,
+            "actual": 9845,
+            "predicted": 11019,
+            "baseline": 11685
+          },
+          {
+            "origin": "2025-01",
+            "target": "2025-02",
+            "horizon": 1,
+            "actual": 10877,
+            "predicted": 10955,
+            "baseline": 11721
+          },
+          {
+            "origin": "2025-01",
+            "target": "2025-03",
+            "horizon": 2,
+            "actual": 10663,
+            "predicted": 10886,
+            "baseline": 11862
+          },
+          {
+            "origin": "2025-01",
+            "target": "2025-04",
+            "horizon": 3,
+            "actual": 10292,
+            "predicted": 10851,
+            "baseline": 11747
+          },
+          {
+            "origin": "2025-01",
+            "target": "2025-05",
+            "horizon": 4,
+            "actual": 10155,
+            "predicted": 10830,
+            "baseline": 11736
+          },
+          {
+            "origin": "2025-01",
+            "target": "2025-06",
+            "horizon": 5,
+            "actual": 9845,
+            "predicted": 10823,
+            "baseline": 11685
+          },
+          {
+            "origin": "2025-01",
+            "target": "2025-07",
+            "horizon": 6,
+            "actual": 9706,
+            "predicted": 10827,
+            "baseline": 11633
+          },
+          {
+            "origin": "2025-02",
+            "target": "2025-03",
+            "horizon": 1,
+            "actual": 10663,
+            "predicted": 10807,
+            "baseline": 11862
+          },
+          {
+            "origin": "2025-02",
+            "target": "2025-04",
+            "horizon": 2,
+            "actual": 10292,
+            "predicted": 10761,
+            "baseline": 11747
+          },
+          {
+            "origin": "2025-02",
+            "target": "2025-05",
+            "horizon": 3,
+            "actual": 10155,
+            "predicted": 10739,
+            "baseline": 11736
+          },
+          {
+            "origin": "2025-02",
+            "target": "2025-06",
+            "horizon": 4,
+            "actual": 9845,
+            "predicted": 10731,
+            "baseline": 11685
+          },
+          {
+            "origin": "2025-02",
+            "target": "2025-07",
+            "horizon": 5,
+            "actual": 9706,
+            "predicted": 10734,
+            "baseline": 11633
+          },
+          {
+            "origin": "2025-02",
+            "target": "2025-08",
+            "horizon": 6,
+            "actual": 9766,
+            "predicted": 10740,
+            "baseline": 11646
+          },
+          {
+            "origin": "2025-03",
+            "target": "2025-04",
+            "horizon": 1,
+            "actual": 10292,
+            "predicted": 10608,
+            "baseline": 11747
+          },
+          {
+            "origin": "2025-03",
+            "target": "2025-05",
+            "horizon": 2,
+            "actual": 10155,
+            "predicted": 10562,
+            "baseline": 11736
+          },
+          {
+            "origin": "2025-03",
+            "target": "2025-06",
+            "horizon": 3,
+            "actual": 9845,
+            "predicted": 10557,
+            "baseline": 11685
+          },
+          {
+            "origin": "2025-03",
+            "target": "2025-07",
+            "horizon": 4,
+            "actual": 9706,
+            "predicted": 10565,
+            "baseline": 11633
+          },
+          {
+            "origin": "2025-03",
+            "target": "2025-08",
+            "horizon": 5,
+            "actual": 9766,
+            "predicted": 10581,
+            "baseline": 11646
+          },
+          {
+            "origin": "2025-03",
+            "target": "2025-09",
+            "horizon": 6,
+            "actual": 9639,
+            "predicted": 10600,
+            "baseline": 11514
+          },
+          {
+            "origin": "2025-04",
+            "target": "2025-05",
+            "horizon": 1,
+            "actual": 10155,
+            "predicted": 10222,
+            "baseline": 11736
+          },
+          {
+            "origin": "2025-04",
+            "target": "2025-06",
+            "horizon": 2,
+            "actual": 9845,
+            "predicted": 10156,
+            "baseline": 11685
+          },
+          {
+            "origin": "2025-04",
+            "target": "2025-07",
+            "horizon": 3,
+            "actual": 9706,
+            "predicted": 10157,
+            "baseline": 11633
+          },
+          {
+            "origin": "2025-04",
+            "target": "2025-08",
+            "horizon": 4,
+            "actual": 9766,
+            "predicted": 10169,
+            "baseline": 11646
+          },
+          {
+            "origin": "2025-04",
+            "target": "2025-09",
+            "horizon": 5,
+            "actual": 9639,
+            "predicted": 10198,
+            "baseline": 11514
+          },
+          {
+            "origin": "2025-04",
+            "target": "2025-10",
+            "horizon": 6,
+            "actual": 9655,
+            "predicted": 10237,
+            "baseline": 11563
+          },
+          {
+            "origin": "2025-05",
+            "target": "2025-06",
+            "horizon": 1,
+            "actual": 9845,
+            "predicted": 10080,
+            "baseline": 11685
+          },
+          {
+            "origin": "2025-05",
+            "target": "2025-07",
+            "horizon": 2,
+            "actual": 9706,
+            "predicted": 10066,
+            "baseline": 11633
+          },
+          {
+            "origin": "2025-05",
+            "target": "2025-08",
+            "horizon": 3,
+            "actual": 9766,
+            "predicted": 10078,
+            "baseline": 11646
+          },
+          {
+            "origin": "2025-05",
+            "target": "2025-09",
+            "horizon": 4,
+            "actual": 9639,
+            "predicted": 10110,
+            "baseline": 11514
+          },
+          {
+            "origin": "2025-05",
+            "target": "2025-10",
+            "horizon": 5,
+            "actual": 9655,
+            "predicted": 10155,
+            "baseline": 11563
+          },
+          {
+            "origin": "2025-05",
+            "target": "2025-11",
+            "horizon": 6,
+            "actual": 9445,
+            "predicted": 10204,
+            "baseline": 11457
+          },
+          {
+            "origin": "2025-06",
+            "target": "2025-07",
+            "horizon": 1,
+            "actual": 9706,
+            "predicted": 9801,
+            "baseline": 11633
+          },
+          {
+            "origin": "2025-06",
+            "target": "2025-08",
+            "horizon": 2,
+            "actual": 9766,
+            "predicted": 9757,
+            "baseline": 11646
+          },
+          {
+            "origin": "2025-06",
+            "target": "2025-09",
+            "horizon": 3,
+            "actual": 9639,
+            "predicted": 9780,
+            "baseline": 11514
+          },
+          {
+            "origin": "2025-06",
+            "target": "2025-10",
+            "horizon": 4,
+            "actual": 9655,
+            "predicted": 9825,
+            "baseline": 11563
+          },
+          {
+            "origin": "2025-06",
+            "target": "2025-11",
+            "horizon": 5,
+            "actual": 9445,
+            "predicted": 9890,
+            "baseline": 11457
+          },
+          {
+            "origin": "2025-06",
+            "target": "2025-12",
+            "horizon": 6,
+            "actual": 9307,
+            "predicted": 9970,
+            "baseline": 11277
+          },
+          {
+            "origin": "2025-07",
+            "target": "2025-08",
+            "horizon": 1,
+            "actual": 9766,
+            "predicted": 9648,
+            "baseline": 11646
+          },
+          {
+            "origin": "2025-07",
+            "target": "2025-09",
+            "horizon": 2,
+            "actual": 9639,
+            "predicted": 9646,
+            "baseline": 11514
+          },
+          {
+            "origin": "2025-07",
+            "target": "2025-10",
+            "horizon": 3,
+            "actual": 9655,
+            "predicted": 9682,
+            "baseline": 11563
+          },
+          {
+            "origin": "2025-07",
+            "target": "2025-11",
+            "horizon": 4,
+            "actual": 9445,
+            "predicted": 9740,
+            "baseline": 11457
+          },
+          {
+            "origin": "2025-07",
+            "target": "2025-12",
+            "horizon": 5,
+            "actual": 9307,
+            "predicted": 9819,
+            "baseline": 11277
+          },
+          {
+            "origin": "2025-07",
+            "target": "2026-01",
+            "horizon": 6,
+            "actual": 9135,
+            "predicted": 9906,
+            "baseline": 11028
+          },
+          {
+            "origin": "2025-08",
+            "target": "2025-09",
+            "horizon": 1,
+            "actual": 9639,
+            "predicted": 9783,
+            "baseline": 11514
+          },
+          {
+            "origin": "2025-08",
+            "target": "2025-10",
+            "horizon": 2,
+            "actual": 9655,
+            "predicted": 9853,
+            "baseline": 11563
+          },
+          {
+            "origin": "2025-08",
+            "target": "2025-11",
+            "horizon": 3,
+            "actual": 9445,
+            "predicted": 9926,
+            "baseline": 11457
+          },
+          {
+            "origin": "2025-08",
+            "target": "2025-12",
+            "horizon": 4,
+            "actual": 9307,
+            "predicted": 10020,
+            "baseline": 11277
+          },
+          {
+            "origin": "2025-08",
+            "target": "2026-01",
+            "horizon": 5,
+            "actual": 9135,
+            "predicted": 10119,
+            "baseline": 11028
+          },
+          {
+            "origin": "2025-08",
+            "target": "2026-02",
+            "horizon": 6,
+            "actual": 9025,
+            "predicted": 10218,
+            "baseline": 10877
+          },
+          {
+            "origin": "2025-09",
+            "target": "2025-10",
+            "horizon": 1,
+            "actual": 9655,
+            "predicted": 9687,
+            "baseline": 11563
+          },
+          {
+            "origin": "2025-09",
+            "target": "2025-11",
+            "horizon": 2,
+            "actual": 9445,
+            "predicted": 9723,
+            "baseline": 11457
+          },
+          {
+            "origin": "2025-09",
+            "target": "2025-12",
+            "horizon": 3,
+            "actual": 9307,
+            "predicted": 9811,
+            "baseline": 11277
+          },
+          {
+            "origin": "2025-09",
+            "target": "2026-01",
+            "horizon": 4,
+            "actual": 9135,
+            "predicted": 9909,
+            "baseline": 11028
+          },
+          {
+            "origin": "2025-09",
+            "target": "2026-02",
+            "horizon": 5,
+            "actual": 9025,
+            "predicted": 10020,
+            "baseline": 10877
+          },
+          {
+            "origin": "2025-09",
+            "target": "2026-03",
+            "horizon": 6,
+            "actual": 8913,
+            "predicted": 10141,
+            "baseline": 10663
+          },
+          {
+            "origin": "2025-10",
+            "target": "2025-11",
+            "horizon": 1,
+            "actual": 9445,
+            "predicted": 9687,
+            "baseline": 11457
+          },
+          {
+            "origin": "2025-10",
+            "target": "2025-12",
+            "horizon": 2,
+            "actual": 9307,
+            "predicted": 9767,
+            "baseline": 11277
+          },
+          {
+            "origin": "2025-10",
+            "target": "2026-01",
+            "horizon": 3,
+            "actual": 9135,
+            "predicted": 9866,
+            "baseline": 11028
+          },
+          {
+            "origin": "2025-10",
+            "target": "2026-02",
+            "horizon": 4,
+            "actual": 9025,
+            "predicted": 9983,
+            "baseline": 10877
+          },
+          {
+            "origin": "2025-10",
+            "target": "2026-03",
+            "horizon": 5,
+            "actual": 8913,
+            "predicted": 10113,
+            "baseline": 10663
+          },
+          {
+            "origin": "2025-10",
+            "target": "2026-04",
+            "horizon": 6,
+            "actual": 8694,
+            "predicted": 10247,
+            "baseline": 10292
+          },
+          {
+            "origin": "2025-11",
+            "target": "2025-12",
+            "horizon": 1,
+            "actual": 9307,
+            "predicted": 9489,
+            "baseline": 11277
+          },
+          {
+            "origin": "2025-11",
+            "target": "2026-01",
+            "horizon": 2,
+            "actual": 9135,
+            "predicted": 9524,
+            "baseline": 11028
+          },
+          {
+            "origin": "2025-11",
+            "target": "2026-02",
+            "horizon": 3,
+            "actual": 9025,
+            "predicted": 9625,
+            "baseline": 10877
+          },
+          {
+            "origin": "2025-11",
+            "target": "2026-03",
+            "horizon": 4,
+            "actual": 8913,
+            "predicted": 9744,
+            "baseline": 10663
+          },
+          {
+            "origin": "2025-11",
+            "target": "2026-04",
+            "horizon": 5,
+            "actual": 8694,
+            "predicted": 9888,
+            "baseline": 10292
+          },
+          {
+            "origin": "2025-11",
+            "target": "2026-05",
+            "horizon": 6,
+            "actual": 8760,
+            "predicted": 10045,
+            "baseline": 10155
+          },
+          {
+            "origin": "2025-12",
+            "target": "2026-01",
+            "horizon": 1,
+            "actual": 9135,
+            "predicted": 9315,
+            "baseline": 11028
+          },
+          {
+            "origin": "2025-12",
+            "target": "2026-02",
+            "horizon": 2,
+            "actual": 9025,
+            "predicted": 9367,
+            "baseline": 10877
+          },
+          {
+            "origin": "2025-12",
+            "target": "2026-03",
+            "horizon": 3,
+            "actual": 8913,
+            "predicted": 9473,
+            "baseline": 10663
+          },
+          {
+            "origin": "2025-12",
+            "target": "2026-04",
+            "horizon": 4,
+            "actual": 8694,
+            "predicted": 9608,
+            "baseline": 10292
+          },
+          {
+            "origin": "2025-12",
+            "target": "2026-05",
+            "horizon": 5,
+            "actual": 8760,
+            "predicted": 9768,
+            "baseline": 10155
+          },
+          {
+            "origin": "2025-12",
+            "target": "2026-06",
+            "horizon": 6,
+            "actual": 8662,
+            "predicted": 9942,
+            "baseline": 9845
+          }
+        ]
+      },
+      "forecast": [
+        {
+          "date": "2026-07",
+          "value": 8743,
+          "lower": 8535,
+          "upper": 8786
+        },
+        {
+          "date": "2026-08",
+          "value": 8807,
+          "lower": 8440,
+          "upper": 8810
+        },
+        {
+          "date": "2026-09",
+          "value": 8921,
+          "lower": 8352,
+          "upper": 8921
+        },
+        {
+          "date": "2026-10",
+          "value": 9049,
+          "lower": 8250,
+          "upper": 9049
+        },
+        {
+          "date": "2026-11",
+          "value": 9190,
+          "lower": 8199,
+          "upper": 9190
+        },
+        {
+          "date": "2026-12",
+          "value": 9343,
+          "lower": 8145,
+          "upper": 9343
+        }
+      ],
+      "anomalies": [
+        {
+          "date": "2017-11",
+          "value": 15684,
+          "expected": 14805,
+          "score": 4.26,
+          "direction": "above"
+        },
+        {
+          "date": "2020-05",
+          "value": 11902,
+          "expected": 10671,
+          "score": 4.22,
+          "direction": "above"
+        }
+      ]
+    },
+    "ga": {
+      "model": "Ridge autoregression",
+      "alpha": 1,
+      "trainingWindow": 84,
+      "seasonalPeriod": 12,
+      "learnedWeights": [
+        {
+          "feature": "Previous month",
+          "coefficient": 0.18056534493337742
+        },
+        {
+          "feature": "2 months earlier",
+          "coefficient": 0.004706501475282281
+        },
+        {
+          "feature": "3 months earlier",
+          "coefficient": -0.03149784160185707
+        },
+        {
+          "feature": "6 months earlier",
+          "coefficient": -0.009934856529163727
+        },
+        {
+          "feature": "12 months earlier",
+          "coefficient": 0.008595720603961023
+        },
+        {
+          "feature": "Recent 3-month average",
+          "coefficient": 0.05181273048703975
+        },
+        {
+          "feature": "Recent 12-month average",
+          "coefficient": -0.01746375024161613
+        },
+        {
+          "feature": "Annual seasonality \u00b7 sine",
+          "coefficient": 0.012806157798603331
+        },
+        {
+          "feature": "Annual seasonality \u00b7 cosine",
+          "coefficient": 0.0005059869981474755
+        }
+      ],
+      "trainingTargets": 84,
+      "meanAbsolutePercentError": 8.37436389610197,
+      "trainingStart": "2019-07",
+      "trainingEnd": "2026-06",
+      "backtest": {
+        "originCount": 18,
+        "firstOrigin": "2024-07",
+        "lastOrigin": "2025-12",
+        "mae": 1473,
+        "baselineMae": 2305,
+        "improvementPct": 36.1,
+        "metrics": [
+          {
+            "horizon": 1,
+            "mae": 416,
+            "baselineMae": 2718
+          },
+          {
+            "horizon": 2,
+            "mae": 835,
+            "baselineMae": 2497
+          },
+          {
+            "horizon": 3,
+            "mae": 1321,
+            "baselineMae": 2349
+          },
+          {
+            "horizon": 4,
+            "mae": 1733,
+            "baselineMae": 2204
+          },
+          {
+            "horizon": 5,
+            "mae": 2112,
+            "baselineMae": 2090
+          },
+          {
+            "horizon": 6,
+            "mae": 2420,
+            "baselineMae": 1971
+          }
+        ],
+        "predictions": [
+          {
+            "origin": "2024-07",
+            "target": "2024-08",
+            "horizon": 1,
+            "actual": 15714,
+            "predicted": 15254,
+            "baseline": 11657
+          },
+          {
+            "origin": "2024-07",
+            "target": "2024-09",
+            "horizon": 2,
+            "actual": 15718,
+            "predicted": 14781,
+            "baseline": 12032
+          },
+          {
+            "origin": "2024-07",
+            "target": "2024-10",
+            "horizon": 3,
+            "actual": 16272,
+            "predicted": 14261,
+            "baseline": 12828
+          },
+          {
+            "origin": "2024-07",
+            "target": "2024-11",
+            "horizon": 4,
+            "actual": 16058,
+            "predicted": 13794,
+            "baseline": 13225
+          },
+          {
+            "origin": "2024-07",
+            "target": "2024-12",
+            "horizon": 5,
+            "actual": 16388,
+            "predicted": 13425,
+            "baseline": 13617
+          },
+          {
+            "origin": "2024-07",
+            "target": "2025-01",
+            "horizon": 6,
+            "actual": 16744,
+            "predicted": 13160,
+            "baseline": 13830
+          },
+          {
+            "origin": "2024-08",
+            "target": "2024-09",
+            "horizon": 1,
+            "actual": 15718,
+            "predicted": 15261,
+            "baseline": 12032
+          },
+          {
+            "origin": "2024-08",
+            "target": "2024-10",
+            "horizon": 2,
+            "actual": 16272,
+            "predicted": 14776,
+            "baseline": 12828
+          },
+          {
+            "origin": "2024-08",
+            "target": "2024-11",
+            "horizon": 3,
+            "actual": 16058,
+            "predicted": 14291,
+            "baseline": 13225
+          },
+          {
+            "origin": "2024-08",
+            "target": "2024-12",
+            "horizon": 4,
+            "actual": 16388,
+            "predicted": 13900,
+            "baseline": 13617
+          },
+          {
+            "origin": "2024-08",
+            "target": "2025-01",
+            "horizon": 5,
+            "actual": 16744,
+            "predicted": 13604,
+            "baseline": 13830
+          },
+          {
+            "origin": "2024-08",
+            "target": "2025-02",
+            "horizon": 6,
+            "actual": 16906,
+            "predicted": 13389,
+            "baseline": 13946
+          },
+          {
+            "origin": "2024-09",
+            "target": "2024-10",
+            "horizon": 1,
+            "actual": 16272,
+            "predicted": 15274,
+            "baseline": 12828
+          },
+          {
+            "origin": "2024-09",
+            "target": "2024-11",
+            "horizon": 2,
+            "actual": 16058,
+            "predicted": 14851,
+            "baseline": 13225
+          },
+          {
+            "origin": "2024-09",
+            "target": "2024-12",
+            "horizon": 3,
+            "actual": 16388,
+            "predicted": 14467,
+            "baseline": 13617
+          },
+          {
+            "origin": "2024-09",
+            "target": "2025-01",
+            "horizon": 4,
+            "actual": 16744,
+            "predicted": 14172,
+            "baseline": 13830
+          },
+          {
+            "origin": "2024-09",
+            "target": "2025-02",
+            "horizon": 5,
+            "actual": 16906,
+            "predicted": 13946,
+            "baseline": 13946
+          },
+          {
+            "origin": "2024-09",
+            "target": "2025-03",
+            "horizon": 6,
+            "actual": 17864,
+            "predicted": 13760,
+            "baseline": 14503
+          },
+          {
+            "origin": "2024-10",
+            "target": "2024-11",
+            "horizon": 1,
+            "actual": 16058,
+            "predicted": 15928,
+            "baseline": 13225
+          },
+          {
+            "origin": "2024-10",
+            "target": "2024-12",
+            "horizon": 2,
+            "actual": 16388,
+            "predicted": 15677,
+            "baseline": 13617
+          },
+          {
+            "origin": "2024-10",
+            "target": "2025-01",
+            "horizon": 3,
+            "actual": 16744,
+            "predicted": 15404,
+            "baseline": 13830
+          },
+          {
+            "origin": "2024-10",
+            "target": "2025-02",
+            "horizon": 4,
+            "actual": 16906,
+            "predicted": 15190,
+            "baseline": 13946
+          },
+          {
+            "origin": "2024-10",
+            "target": "2025-03",
+            "horizon": 5,
+            "actual": 17864,
+            "predicted": 14986,
+            "baseline": 14503
+          },
+          {
+            "origin": "2024-10",
+            "target": "2025-04",
+            "horizon": 6,
+            "actual": 18191,
+            "predicted": 14734,
+            "baseline": 14950
+          },
+          {
+            "origin": "2024-11",
+            "target": "2024-12",
+            "horizon": 1,
+            "actual": 16388,
+            "predicted": 15819,
+            "baseline": 13617
+          },
+          {
+            "origin": "2024-11",
+            "target": "2025-01",
+            "horizon": 2,
+            "actual": 16744,
+            "predicted": 15566,
+            "baseline": 13830
+          },
+          {
+            "origin": "2024-11",
+            "target": "2025-02",
+            "horizon": 3,
+            "actual": 16906,
+            "predicted": 15357,
+            "baseline": 13946
+          },
+          {
+            "origin": "2024-11",
+            "target": "2025-03",
+            "horizon": 4,
+            "actual": 17864,
+            "predicted": 15157,
+            "baseline": 14503
+          },
+          {
+            "origin": "2024-11",
+            "target": "2025-04",
+            "horizon": 5,
+            "actual": 18191,
+            "predicted": 14903,
+            "baseline": 14950
+          },
+          {
+            "origin": "2024-11",
+            "target": "2025-05",
+            "horizon": 6,
+            "actual": 18380,
+            "predicted": 14579,
+            "baseline": 15333
+          },
+          {
+            "origin": "2024-12",
+            "target": "2025-01",
+            "horizon": 1,
+            "actual": 16744,
+            "predicted": 16185,
+            "baseline": 13830
+          },
+          {
+            "origin": "2024-12",
+            "target": "2025-02",
+            "horizon": 2,
+            "actual": 16906,
+            "predicted": 16068,
+            "baseline": 13946
+          },
+          {
+            "origin": "2024-12",
+            "target": "2025-03",
+            "horizon": 3,
+            "actual": 17864,
+            "predicted": 15892,
+            "baseline": 14503
+          },
+          {
+            "origin": "2024-12",
+            "target": "2025-04",
+            "horizon": 4,
+            "actual": 18191,
+            "predicted": 15651,
+            "baseline": 14950
+          },
+          {
+            "origin": "2024-12",
+            "target": "2025-05",
+            "horizon": 5,
+            "actual": 18380,
+            "predicted": 15319,
+            "baseline": 15333
+          },
+          {
+            "origin": "2024-12",
+            "target": "2025-06",
+            "horizon": 6,
+            "actual": 18288,
+            "predicted": 14860,
+            "baseline": 15461
+          },
+          {
+            "origin": "2025-01",
+            "target": "2025-02",
+            "horizon": 1,
+            "actual": 16906,
+            "predicted": 16731,
+            "baseline": 13946
+          },
+          {
+            "origin": "2025-01",
+            "target": "2025-03",
+            "horizon": 2,
+            "actual": 17864,
+            "predicted": 16698,
+            "baseline": 14503
+          },
+          {
+            "origin": "2025-01",
+            "target": "2025-04",
+            "horizon": 3,
+            "actual": 18191,
+            "predicted": 16529,
+            "baseline": 14950
+          },
+          {
+            "origin": "2025-01",
+            "target": "2025-05",
+            "horizon": 4,
+            "actual": 18380,
+            "predicted": 16251,
+            "baseline": 15333
+          },
+          {
+            "origin": "2025-01",
+            "target": "2025-06",
+            "horizon": 5,
+            "actual": 18288,
+            "predicted": 15809,
+            "baseline": 15461
+          },
+          {
+            "origin": "2025-01",
+            "target": "2025-07",
+            "horizon": 6,
+            "actual": 18265,
+            "predicted": 15226,
+            "baseline": 15637
+          },
+          {
+            "origin": "2025-02",
+            "target": "2025-03",
+            "horizon": 1,
+            "actual": 17864,
+            "predicted": 16939,
+            "baseline": 14503
+          },
+          {
+            "origin": "2025-02",
+            "target": "2025-04",
+            "horizon": 2,
+            "actual": 18191,
+            "predicted": 16845,
+            "baseline": 14950
+          },
+          {
+            "origin": "2025-02",
+            "target": "2025-05",
+            "horizon": 3,
+            "actual": 18380,
+            "predicted": 16618,
+            "baseline": 15333
+          },
+          {
+            "origin": "2025-02",
+            "target": "2025-06",
+            "horizon": 4,
+            "actual": 18288,
+            "predicted": 16211,
+            "baseline": 15461
+          },
+          {
+            "origin": "2025-02",
+            "target": "2025-07",
+            "horizon": 5,
+            "actual": 18265,
+            "predicted": 15647,
+            "baseline": 15637
+          },
+          {
+            "origin": "2025-02",
+            "target": "2025-08",
+            "horizon": 6,
+            "actual": 18104,
+            "predicted": 14985,
+            "baseline": 15714
+          },
+          {
+            "origin": "2025-03",
+            "target": "2025-04",
+            "horizon": 1,
+            "actual": 18191,
+            "predicted": 17917,
+            "baseline": 14950
+          },
+          {
+            "origin": "2025-03",
+            "target": "2025-05",
+            "horizon": 2,
+            "actual": 18380,
+            "predicted": 17918,
+            "baseline": 15333
+          },
+          {
+            "origin": "2025-03",
+            "target": "2025-06",
+            "horizon": 3,
+            "actual": 18288,
+            "predicted": 17620,
+            "baseline": 15461
+          },
+          {
+            "origin": "2025-03",
+            "target": "2025-07",
+            "horizon": 4,
+            "actual": 18265,
+            "predicted": 17134,
+            "baseline": 15637
+          },
+          {
+            "origin": "2025-03",
+            "target": "2025-08",
+            "horizon": 5,
+            "actual": 18104,
+            "predicted": 16505,
+            "baseline": 15714
+          },
+          {
+            "origin": "2025-03",
+            "target": "2025-09",
+            "horizon": 6,
+            "actual": 18410,
+            "predicted": 15786,
+            "baseline": 15718
+          },
+          {
+            "origin": "2025-04",
+            "target": "2025-05",
+            "horizon": 1,
+            "actual": 18380,
+            "predicted": 18243,
+            "baseline": 15333
+          },
+          {
+            "origin": "2025-04",
+            "target": "2025-06",
+            "horizon": 2,
+            "actual": 18288,
+            "predicted": 18019,
+            "baseline": 15461
+          },
+          {
+            "origin": "2025-04",
+            "target": "2025-07",
+            "horizon": 3,
+            "actual": 18265,
+            "predicted": 17573,
+            "baseline": 15637
+          },
+          {
+            "origin": "2025-04",
+            "target": "2025-08",
+            "horizon": 4,
+            "actual": 18104,
+            "predicted": 16975,
+            "baseline": 15714
+          },
+          {
+            "origin": "2025-04",
+            "target": "2025-09",
+            "horizon": 5,
+            "actual": 18410,
+            "predicted": 16272,
+            "baseline": 15718
+          },
+          {
+            "origin": "2025-04",
+            "target": "2025-10",
+            "horizon": 6,
+            "actual": 18449,
+            "predicted": 15604,
+            "baseline": 16272
+          },
+          {
+            "origin": "2025-05",
+            "target": "2025-06",
+            "horizon": 1,
+            "actual": 18288,
+            "predicted": 18190,
+            "baseline": 15461
+          },
+          {
+            "origin": "2025-05",
+            "target": "2025-07",
+            "horizon": 2,
+            "actual": 18265,
+            "predicted": 17788,
+            "baseline": 15637
+          },
+          {
+            "origin": "2025-05",
+            "target": "2025-08",
+            "horizon": 3,
+            "actual": 18104,
+            "predicted": 17217,
+            "baseline": 15714
+          },
+          {
+            "origin": "2025-05",
+            "target": "2025-09",
+            "horizon": 4,
+            "actual": 18410,
+            "predicted": 16532,
+            "baseline": 15718
+          },
+          {
+            "origin": "2025-05",
+            "target": "2025-10",
+            "horizon": 5,
+            "actual": 18449,
+            "predicted": 15876,
+            "baseline": 16272
+          },
+          {
+            "origin": "2025-05",
+            "target": "2025-11",
+            "horizon": 6,
+            "actual": 17833,
+            "predicted": 15300,
+            "baseline": 16058
+          },
+          {
+            "origin": "2025-06",
+            "target": "2025-07",
+            "horizon": 1,
+            "actual": 18265,
+            "predicted": 17908,
+            "baseline": 15637
+          },
+          {
+            "origin": "2025-06",
+            "target": "2025-08",
+            "horizon": 2,
+            "actual": 18104,
+            "predicted": 17366,
+            "baseline": 15714
+          },
+          {
+            "origin": "2025-06",
+            "target": "2025-09",
+            "horizon": 3,
+            "actual": 18410,
+            "predicted": 16697,
+            "baseline": 15718
+          },
+          {
+            "origin": "2025-06",
+            "target": "2025-10",
+            "horizon": 4,
+            "actual": 18449,
+            "predicted": 16055,
+            "baseline": 16272
+          },
+          {
+            "origin": "2025-06",
+            "target": "2025-11",
+            "horizon": 5,
+            "actual": 17833,
+            "predicted": 15488,
+            "baseline": 16058
+          },
+          {
+            "origin": "2025-06",
+            "target": "2025-12",
+            "horizon": 6,
+            "actual": 17746,
+            "predicted": 15066,
+            "baseline": 16388
+          },
+          {
+            "origin": "2025-07",
+            "target": "2025-08",
+            "horizon": 1,
+            "actual": 18104,
+            "predicted": 17758,
+            "baseline": 15714
+          },
+          {
+            "origin": "2025-07",
+            "target": "2025-09",
+            "horizon": 2,
+            "actual": 18410,
+            "predicted": 17156,
+            "baseline": 15718
+          },
+          {
+            "origin": "2025-07",
+            "target": "2025-10",
+            "horizon": 3,
+            "actual": 18449,
+            "predicted": 16546,
+            "baseline": 16272
+          },
+          {
+            "origin": "2025-07",
+            "target": "2025-11",
+            "horizon": 4,
+            "actual": 17833,
+            "predicted": 16008,
+            "baseline": 16058
+          },
+          {
+            "origin": "2025-07",
+            "target": "2025-12",
+            "horizon": 5,
+            "actual": 17746,
+            "predicted": 15611,
+            "baseline": 16388
+          },
+          {
+            "origin": "2025-07",
+            "target": "2026-01",
+            "horizon": 6,
+            "actual": 17508,
+            "predicted": 15350,
+            "baseline": 16744
+          },
+          {
+            "origin": "2025-08",
+            "target": "2025-09",
+            "horizon": 1,
+            "actual": 18410,
+            "predicted": 17498,
+            "baseline": 15718
+          },
+          {
+            "origin": "2025-08",
+            "target": "2025-10",
+            "horizon": 2,
+            "actual": 18449,
+            "predicted": 16929,
+            "baseline": 16272
+          },
+          {
+            "origin": "2025-08",
+            "target": "2025-11",
+            "horizon": 3,
+            "actual": 17833,
+            "predicted": 16406,
+            "baseline": 16058
+          },
+          {
+            "origin": "2025-08",
+            "target": "2025-12",
+            "horizon": 4,
+            "actual": 17746,
+            "predicted": 16032,
+            "baseline": 16388
+          },
+          {
+            "origin": "2025-08",
+            "target": "2026-01",
+            "horizon": 5,
+            "actual": 17508,
+            "predicted": 15797,
+            "baseline": 16744
+          },
+          {
+            "origin": "2025-08",
+            "target": "2026-02",
+            "horizon": 6,
+            "actual": 16820,
+            "predicted": 15669,
+            "baseline": 16906
+          },
+          {
+            "origin": "2025-09",
+            "target": "2025-10",
+            "horizon": 1,
+            "actual": 18449,
+            "predicted": 17967,
+            "baseline": 16272
+          },
+          {
+            "origin": "2025-09",
+            "target": "2025-11",
+            "horizon": 2,
+            "actual": 17833,
+            "predicted": 17656,
+            "baseline": 16058
+          },
+          {
+            "origin": "2025-09",
+            "target": "2025-12",
+            "horizon": 3,
+            "actual": 17746,
+            "predicted": 17409,
+            "baseline": 16388
+          },
+          {
+            "origin": "2025-09",
+            "target": "2026-01",
+            "horizon": 4,
+            "actual": 17508,
+            "predicted": 17299,
+            "baseline": 16744
+          },
+          {
+            "origin": "2025-09",
+            "target": "2026-02",
+            "horizon": 5,
+            "actual": 16820,
+            "predicted": 17280,
+            "baseline": 16906
+          },
+          {
+            "origin": "2025-09",
+            "target": "2026-03",
+            "horizon": 6,
+            "actual": 16852,
+            "predicted": 17299,
+            "baseline": 17864
+          },
+          {
+            "origin": "2025-10",
+            "target": "2025-11",
+            "horizon": 1,
+            "actual": 17833,
+            "predicted": 18193,
+            "baseline": 16058
+          },
+          {
+            "origin": "2025-10",
+            "target": "2025-12",
+            "horizon": 2,
+            "actual": 17746,
+            "predicted": 18057,
+            "baseline": 16388
+          },
+          {
+            "origin": "2025-10",
+            "target": "2026-01",
+            "horizon": 3,
+            "actual": 17508,
+            "predicted": 18020,
+            "baseline": 16744
+          },
+          {
+            "origin": "2025-10",
+            "target": "2026-02",
+            "horizon": 4,
+            "actual": 16820,
+            "predicted": 18078,
+            "baseline": 16906
+          },
+          {
+            "origin": "2025-10",
+            "target": "2026-03",
+            "horizon": 5,
+            "actual": 16852,
+            "predicted": 18170,
+            "baseline": 17864
+          },
+          {
+            "origin": "2025-10",
+            "target": "2026-04",
+            "horizon": 6,
+            "actual": 17363,
+            "predicted": 18219,
+            "baseline": 18191
+          },
+          {
+            "origin": "2025-11",
+            "target": "2025-12",
+            "horizon": 1,
+            "actual": 17746,
+            "predicted": 17661,
+            "baseline": 16388
+          },
+          {
+            "origin": "2025-11",
+            "target": "2026-01",
+            "horizon": 2,
+            "actual": 17508,
+            "predicted": 17552,
+            "baseline": 16744
+          },
+          {
+            "origin": "2025-11",
+            "target": "2026-02",
+            "horizon": 3,
+            "actual": 16820,
+            "predicted": 17562,
+            "baseline": 16906
+          },
+          {
+            "origin": "2025-11",
+            "target": "2026-03",
+            "horizon": 4,
+            "actual": 16852,
+            "predicted": 17598,
+            "baseline": 17864
+          },
+          {
+            "origin": "2025-11",
+            "target": "2026-04",
+            "horizon": 5,
+            "actual": 17363,
+            "predicted": 17592,
+            "baseline": 18191
+          },
+          {
+            "origin": "2025-11",
+            "target": "2026-05",
+            "horizon": 6,
+            "actual": 17592,
+            "predicted": 17517,
+            "baseline": 18380
+          },
+          {
+            "origin": "2025-12",
+            "target": "2026-01",
+            "horizon": 1,
+            "actual": 17508,
+            "predicted": 17668,
+            "baseline": 16744
+          },
+          {
+            "origin": "2025-12",
+            "target": "2026-02",
+            "horizon": 2,
+            "actual": 16820,
+            "predicted": 17714,
+            "baseline": 16906
+          },
+          {
+            "origin": "2025-12",
+            "target": "2026-03",
+            "horizon": 3,
+            "actual": 16852,
+            "predicted": 17774,
+            "baseline": 17864
+          },
+          {
+            "origin": "2025-12",
+            "target": "2026-04",
+            "horizon": 4,
+            "actual": 17363,
+            "predicted": 17783,
+            "baseline": 18191
+          },
+          {
+            "origin": "2025-12",
+            "target": "2026-05",
+            "horizon": 5,
+            "actual": 17592,
+            "predicted": 17718,
+            "baseline": 18380
+          },
+          {
+            "origin": "2025-12",
+            "target": "2026-06",
+            "horizon": 6,
+            "actual": 17655,
+            "predicted": 17505,
+            "baseline": 18288
+          }
+        ]
+      },
+      "forecast": [
+        {
+          "date": "2026-07",
+          "value": 17386,
+          "lower": 17386,
+          "upper": 18305
+        },
+        {
+          "date": "2026-08",
+          "value": 17035,
+          "lower": 16917,
+          "upper": 18464
+        },
+        {
+          "date": "2026-09",
+          "value": 16640,
+          "lower": 16098,
+          "upper": 18748
+        },
+        {
+          "date": "2026-10",
+          "value": 16265,
+          "lower": 15789,
+          "upper": 19172
+        },
+        {
+          "date": "2026-11",
+          "value": 15964,
+          "lower": 15691,
+          "upper": 19487
+        },
+        {
+          "date": "2026-12",
+          "value": 15804,
+          "lower": 15727,
+          "upper": 20001
+        }
+      ],
+      "anomalies": [
+        {
+          "date": "2018-08",
+          "value": 12194,
+          "expected": 11316,
+          "score": 3.51,
+          "direction": "above"
+        },
+        {
+          "date": "2019-08",
+          "value": 10609,
+          "expected": 9786,
+          "score": 5.12,
+          "direction": "above"
+        },
+        {
+          "date": "2020-03",
+          "value": 10858,
+          "expected": 9867,
+          "score": 5.73,
+          "direction": "above"
+        },
+        {
+          "date": "2020-04",
+          "value": 11449,
+          "expected": 10235,
+          "score": 6.56,
+          "direction": "above"
+        },
+        {
+          "date": "2020-05",
+          "value": 12719,
+          "expected": 10805,
+          "score": 9.46,
+          "direction": "above"
+        },
+        {
+          "date": "2020-06",
+          "value": 13230,
+          "expected": 11937,
+          "score": 4.88,
+          "direction": "above"
+        },
+        {
+          "date": "2022-08",
+          "value": 13127,
+          "expected": 16262,
+          "score": -5.56,
+          "direction": "below"
+        },
+        {
+          "date": "2022-09",
+          "value": 11595,
+          "expected": 13686,
+          "score": -4.31,
+          "direction": "below"
+        }
+      ]
+    },
+    "tanfEA": {
+      "model": "Ridge autoregression",
+      "alpha": 1,
+      "trainingWindow": 84,
+      "seasonalPeriod": 12,
+      "learnedWeights": [
+        {
+          "feature": "Previous month",
+          "coefficient": 0.0513106960804931
+        },
+        {
+          "feature": "2 months earlier",
+          "coefficient": 0.022538260531134488
+        },
+        {
+          "feature": "3 months earlier",
+          "coefficient": 0.011284639598126287
+        },
+        {
+          "feature": "6 months earlier",
+          "coefficient": 0.007707125079931654
+        },
+        {
+          "feature": "12 months earlier",
+          "coefficient": 0.003097383827283297
+        },
+        {
+          "feature": "Recent 3-month average",
+          "coefficient": 0.030313800072543313
+        },
+        {
+          "feature": "Recent 12-month average",
+          "coefficient": -0.001563798521672089
+        },
+        {
+          "feature": "Annual seasonality \u00b7 sine",
+          "coefficient": 0.006822573819539307
+        },
+        {
+          "feature": "Annual seasonality \u00b7 cosine",
+          "coefficient": -0.00953522299516782
+        }
+      ],
+      "trainingTargets": 84,
+      "meanAbsolutePercentError": 6.062602594376345,
+      "trainingStart": "2019-07",
+      "trainingEnd": "2026-06",
+      "backtest": {
+        "originCount": 18,
+        "firstOrigin": "2024-07",
+        "lastOrigin": "2025-12",
+        "mae": 109,
+        "baselineMae": 98,
+        "improvementPct": -11.2,
+        "metrics": [
+          {
+            "horizon": 1,
+            "mae": 89,
+            "baselineMae": 130
+          },
+          {
+            "horizon": 2,
+            "mae": 91,
+            "baselineMae": 115
+          },
+          {
+            "horizon": 3,
+            "mae": 107,
+            "baselineMae": 107
+          },
+          {
+            "horizon": 4,
+            "mae": 111,
+            "baselineMae": 88
+          },
+          {
+            "horizon": 5,
+            "mae": 123,
+            "baselineMae": 80
+          },
+          {
+            "horizon": 6,
+            "mae": 131,
+            "baselineMae": 67
+          }
+        ],
+        "predictions": [
+          {
+            "origin": "2024-07",
+            "target": "2024-08",
+            "horizon": 1,
+            "actual": 1659,
+            "predicted": 1657,
+            "baseline": 1374
+          },
+          {
+            "origin": "2024-07",
+            "target": "2024-09",
+            "horizon": 2,
+            "actual": 1746,
+            "predicted": 1613,
+            "baseline": 1477
+          },
+          {
+            "origin": "2024-07",
+            "target": "2024-10",
+            "horizon": 3,
+            "actual": 1864,
+            "predicted": 1586,
+            "baseline": 1495
+          },
+          {
+            "origin": "2024-07",
+            "target": "2024-11",
+            "horizon": 4,
+            "actual": 1650,
+            "predicted": 1556,
+            "baseline": 1464
+          },
+          {
+            "origin": "2024-07",
+            "target": "2024-12",
+            "horizon": 5,
+            "actual": 1790,
+            "predicted": 1531,
+            "baseline": 1448
+          },
+          {
+            "origin": "2024-07",
+            "target": "2025-01",
+            "horizon": 6,
+            "actual": 1700,
+            "predicted": 1527,
+            "baseline": 1506
+          },
+          {
+            "origin": "2024-08",
+            "target": "2024-09",
+            "horizon": 1,
+            "actual": 1746,
+            "predicted": 1612,
+            "baseline": 1477
+          },
+          {
+            "origin": "2024-08",
+            "target": "2024-10",
+            "horizon": 2,
+            "actual": 1864,
+            "predicted": 1585,
+            "baseline": 1495
+          },
+          {
+            "origin": "2024-08",
+            "target": "2024-11",
+            "horizon": 3,
+            "actual": 1650,
+            "predicted": 1555,
+            "baseline": 1464
+          },
+          {
+            "origin": "2024-08",
+            "target": "2024-12",
+            "horizon": 4,
+            "actual": 1790,
+            "predicted": 1529,
+            "baseline": 1448
+          },
+          {
+            "origin": "2024-08",
+            "target": "2025-01",
+            "horizon": 5,
+            "actual": 1700,
+            "predicted": 1524,
+            "baseline": 1506
+          },
+          {
+            "origin": "2024-08",
+            "target": "2025-02",
+            "horizon": 6,
+            "actual": 1748,
+            "predicted": 1531,
+            "baseline": 1646
+          },
+          {
+            "origin": "2024-09",
+            "target": "2024-10",
+            "horizon": 1,
+            "actual": 1864,
+            "predicted": 1661,
+            "baseline": 1495
+          },
+          {
+            "origin": "2024-09",
+            "target": "2024-11",
+            "horizon": 2,
+            "actual": 1650,
+            "predicted": 1623,
+            "baseline": 1464
+          },
+          {
+            "origin": "2024-09",
+            "target": "2024-12",
+            "horizon": 3,
+            "actual": 1790,
+            "predicted": 1599,
+            "baseline": 1448
+          },
+          {
+            "origin": "2024-09",
+            "target": "2025-01",
+            "horizon": 4,
+            "actual": 1700,
+            "predicted": 1585,
+            "baseline": 1506
+          },
+          {
+            "origin": "2024-09",
+            "target": "2025-02",
+            "horizon": 5,
+            "actual": 1748,
+            "predicted": 1584,
+            "baseline": 1646
+          },
+          {
+            "origin": "2024-09",
+            "target": "2025-03",
+            "horizon": 6,
+            "actual": 1766,
+            "predicted": 1598,
+            "baseline": 1685
+          },
+          {
+            "origin": "2024-10",
+            "target": "2024-11",
+            "horizon": 1,
+            "actual": 1650,
+            "predicted": 1737,
+            "baseline": 1464
+          },
+          {
+            "origin": "2024-10",
+            "target": "2024-12",
+            "horizon": 2,
+            "actual": 1790,
+            "predicted": 1697,
+            "baseline": 1448
+          },
+          {
+            "origin": "2024-10",
+            "target": "2025-01",
+            "horizon": 3,
+            "actual": 1700,
+            "predicted": 1690,
+            "baseline": 1506
+          },
+          {
+            "origin": "2024-10",
+            "target": "2025-02",
+            "horizon": 4,
+            "actual": 1748,
+            "predicted": 1671,
+            "baseline": 1646
+          },
+          {
+            "origin": "2024-10",
+            "target": "2025-03",
+            "horizon": 5,
+            "actual": 1766,
+            "predicted": 1677,
+            "baseline": 1685
+          },
+          {
+            "origin": "2024-10",
+            "target": "2025-04",
+            "horizon": 6,
+            "actual": 1769,
+            "predicted": 1698,
+            "baseline": 1770
+          },
+          {
+            "origin": "2024-11",
+            "target": "2024-12",
+            "horizon": 1,
+            "actual": 1790,
+            "predicted": 1647,
+            "baseline": 1448
+          },
+          {
+            "origin": "2024-11",
+            "target": "2025-01",
+            "horizon": 2,
+            "actual": 1700,
+            "predicted": 1647,
+            "baseline": 1506
+          },
+          {
+            "origin": "2024-11",
+            "target": "2025-02",
+            "horizon": 3,
+            "actual": 1748,
+            "predicted": 1625,
+            "baseline": 1646
+          },
+          {
+            "origin": "2024-11",
+            "target": "2025-03",
+            "horizon": 4,
+            "actual": 1766,
+            "predicted": 1638,
+            "baseline": 1685
+          },
+          {
+            "origin": "2024-11",
+            "target": "2025-04",
+            "horizon": 5,
+            "actual": 1769,
+            "predicted": 1663,
+            "baseline": 1770
+          },
+          {
+            "origin": "2024-11",
+            "target": "2025-05",
+            "horizon": 6,
+            "actual": 1746,
+            "predicted": 1660,
+            "baseline": 1768
+          },
+          {
+            "origin": "2024-12",
+            "target": "2025-01",
+            "horizon": 1,
+            "actual": 1700,
+            "predicted": 1727,
+            "baseline": 1506
+          },
+          {
+            "origin": "2024-12",
+            "target": "2025-02",
+            "horizon": 2,
+            "actual": 1748,
+            "predicted": 1698,
+            "baseline": 1646
+          },
+          {
+            "origin": "2024-12",
+            "target": "2025-03",
+            "horizon": 3,
+            "actual": 1766,
+            "predicted": 1717,
+            "baseline": 1685
+          },
+          {
+            "origin": "2024-12",
+            "target": "2025-04",
+            "horizon": 4,
+            "actual": 1769,
+            "predicted": 1730,
+            "baseline": 1770
+          },
+          {
+            "origin": "2024-12",
+            "target": "2025-05",
+            "horizon": 5,
+            "actual": 1746,
+            "predicted": 1720,
+            "baseline": 1768
+          },
+          {
+            "origin": "2024-12",
+            "target": "2025-06",
+            "horizon": 6,
+            "actual": 1655,
+            "predicted": 1730,
+            "baseline": 1636
+          },
+          {
+            "origin": "2025-01",
+            "target": "2025-02",
+            "horizon": 1,
+            "actual": 1748,
+            "predicted": 1679,
+            "baseline": 1646
+          },
+          {
+            "origin": "2025-01",
+            "target": "2025-03",
+            "horizon": 2,
+            "actual": 1766,
+            "predicted": 1698,
+            "baseline": 1685
+          },
+          {
+            "origin": "2025-01",
+            "target": "2025-04",
+            "horizon": 3,
+            "actual": 1769,
+            "predicted": 1710,
+            "baseline": 1770
+          },
+          {
+            "origin": "2025-01",
+            "target": "2025-05",
+            "horizon": 4,
+            "actual": 1746,
+            "predicted": 1701,
+            "baseline": 1768
+          },
+          {
+            "origin": "2025-01",
+            "target": "2025-06",
+            "horizon": 5,
+            "actual": 1655,
+            "predicted": 1714,
+            "baseline": 1636
+          },
+          {
+            "origin": "2025-01",
+            "target": "2025-07",
+            "horizon": 6,
+            "actual": 1752,
+            "predicted": 1698,
+            "baseline": 1704
+          },
+          {
+            "origin": "2025-02",
+            "target": "2025-03",
+            "horizon": 1,
+            "actual": 1766,
+            "predicted": 1734,
+            "baseline": 1685
+          },
+          {
+            "origin": "2025-02",
+            "target": "2025-04",
+            "horizon": 2,
+            "actual": 1769,
+            "predicted": 1744,
+            "baseline": 1770
+          },
+          {
+            "origin": "2025-02",
+            "target": "2025-05",
+            "horizon": 3,
+            "actual": 1746,
+            "predicted": 1737,
+            "baseline": 1768
+          },
+          {
+            "origin": "2025-02",
+            "target": "2025-06",
+            "horizon": 4,
+            "actual": 1655,
+            "predicted": 1746,
+            "baseline": 1636
+          },
+          {
+            "origin": "2025-02",
+            "target": "2025-07",
+            "horizon": 5,
+            "actual": 1752,
+            "predicted": 1726,
+            "baseline": 1704
+          },
+          {
+            "origin": "2025-02",
+            "target": "2025-08",
+            "horizon": 6,
+            "actual": 1835,
+            "predicted": 1705,
+            "baseline": 1659
+          },
+          {
+            "origin": "2025-03",
+            "target": "2025-04",
+            "horizon": 1,
+            "actual": 1769,
+            "predicted": 1758,
+            "baseline": 1770
+          },
+          {
+            "origin": "2025-03",
+            "target": "2025-05",
+            "horizon": 2,
+            "actual": 1746,
+            "predicted": 1750,
+            "baseline": 1768
+          },
+          {
+            "origin": "2025-03",
+            "target": "2025-06",
+            "horizon": 3,
+            "actual": 1655,
+            "predicted": 1760,
+            "baseline": 1636
+          },
+          {
+            "origin": "2025-03",
+            "target": "2025-07",
+            "horizon": 4,
+            "actual": 1752,
+            "predicted": 1738,
+            "baseline": 1704
+          },
+          {
+            "origin": "2025-03",
+            "target": "2025-08",
+            "horizon": 5,
+            "actual": 1835,
+            "predicted": 1716,
+            "baseline": 1659
+          },
+          {
+            "origin": "2025-03",
+            "target": "2025-09",
+            "horizon": 6,
+            "actual": 1800,
+            "predicted": 1684,
+            "baseline": 1746
+          },
+          {
+            "origin": "2025-04",
+            "target": "2025-05",
+            "horizon": 1,
+            "actual": 1746,
+            "predicted": 1754,
+            "baseline": 1768
+          },
+          {
+            "origin": "2025-04",
+            "target": "2025-06",
+            "horizon": 2,
+            "actual": 1655,
+            "predicted": 1764,
+            "baseline": 1636
+          },
+          {
+            "origin": "2025-04",
+            "target": "2025-07",
+            "horizon": 3,
+            "actual": 1752,
+            "predicted": 1742,
+            "baseline": 1704
+          },
+          {
+            "origin": "2025-04",
+            "target": "2025-08",
+            "horizon": 4,
+            "actual": 1835,
+            "predicted": 1719,
+            "baseline": 1659
+          },
+          {
+            "origin": "2025-04",
+            "target": "2025-09",
+            "horizon": 5,
+            "actual": 1800,
+            "predicted": 1686,
+            "baseline": 1746
+          },
+          {
+            "origin": "2025-04",
+            "target": "2025-10",
+            "horizon": 6,
+            "actual": 1908,
+            "predicted": 1647,
+            "baseline": 1864
+          },
+          {
+            "origin": "2025-05",
+            "target": "2025-06",
+            "horizon": 1,
+            "actual": 1655,
+            "predicted": 1761,
+            "baseline": 1636
+          },
+          {
+            "origin": "2025-05",
+            "target": "2025-07",
+            "horizon": 2,
+            "actual": 1752,
+            "predicted": 1739,
+            "baseline": 1704
+          },
+          {
+            "origin": "2025-05",
+            "target": "2025-08",
+            "horizon": 3,
+            "actual": 1835,
+            "predicted": 1716,
+            "baseline": 1659
+          },
+          {
+            "origin": "2025-05",
+            "target": "2025-09",
+            "horizon": 4,
+            "actual": 1800,
+            "predicted": 1684,
+            "baseline": 1746
+          },
+          {
+            "origin": "2025-05",
+            "target": "2025-10",
+            "horizon": 5,
+            "actual": 1908,
+            "predicted": 1645,
+            "baseline": 1864
+          },
+          {
+            "origin": "2025-05",
+            "target": "2025-11",
+            "horizon": 6,
+            "actual": 1650,
+            "predicted": 1619,
+            "baseline": 1650
+          },
+          {
+            "origin": "2025-06",
+            "target": "2025-07",
+            "horizon": 1,
+            "actual": 1752,
+            "predicted": 1684,
+            "baseline": 1704
+          },
+          {
+            "origin": "2025-06",
+            "target": "2025-08",
+            "horizon": 2,
+            "actual": 1835,
+            "predicted": 1665,
+            "baseline": 1659
+          },
+          {
+            "origin": "2025-06",
+            "target": "2025-09",
+            "horizon": 3,
+            "actual": 1800,
+            "predicted": 1632,
+            "baseline": 1746
+          },
+          {
+            "origin": "2025-06",
+            "target": "2025-10",
+            "horizon": 4,
+            "actual": 1908,
+            "predicted": 1604,
+            "baseline": 1864
+          },
+          {
+            "origin": "2025-06",
+            "target": "2025-11",
+            "horizon": 5,
+            "actual": 1650,
+            "predicted": 1581,
+            "baseline": 1650
+          },
+          {
+            "origin": "2025-06",
+            "target": "2025-12",
+            "horizon": 6,
+            "actual": 1858,
+            "predicted": 1555,
+            "baseline": 1790
+          },
+          {
+            "origin": "2025-07",
+            "target": "2025-08",
+            "horizon": 1,
+            "actual": 1835,
+            "predicted": 1704,
+            "baseline": 1659
+          },
+          {
+            "origin": "2025-07",
+            "target": "2025-09",
+            "horizon": 2,
+            "actual": 1800,
+            "predicted": 1669,
+            "baseline": 1746
+          },
+          {
+            "origin": "2025-07",
+            "target": "2025-10",
+            "horizon": 3,
+            "actual": 1908,
+            "predicted": 1643,
+            "baseline": 1864
+          },
+          {
+            "origin": "2025-07",
+            "target": "2025-11",
+            "horizon": 4,
+            "actual": 1650,
+            "predicted": 1615,
+            "baseline": 1650
+          },
+          {
+            "origin": "2025-07",
+            "target": "2025-12",
+            "horizon": 5,
+            "actual": 1858,
+            "predicted": 1585,
+            "baseline": 1790
+          },
+          {
+            "origin": "2025-07",
+            "target": "2026-01",
+            "horizon": 6,
+            "actual": 1786,
+            "predicted": 1582,
+            "baseline": 1700
+          },
+          {
+            "origin": "2025-08",
+            "target": "2025-09",
+            "horizon": 1,
+            "actual": 1800,
+            "predicted": 1740,
+            "baseline": 1746
+          },
+          {
+            "origin": "2025-08",
+            "target": "2025-10",
+            "horizon": 2,
+            "actual": 1908,
+            "predicted": 1708,
+            "baseline": 1864
+          },
+          {
+            "origin": "2025-08",
+            "target": "2025-11",
+            "horizon": 3,
+            "actual": 1650,
+            "predicted": 1686,
+            "baseline": 1650
+          },
+          {
+            "origin": "2025-08",
+            "target": "2025-12",
+            "horizon": 4,
+            "actual": 1858,
+            "predicted": 1646,
+            "baseline": 1790
+          },
+          {
+            "origin": "2025-08",
+            "target": "2026-01",
+            "horizon": 5,
+            "actual": 1786,
+            "predicted": 1638,
+            "baseline": 1700
+          },
+          {
+            "origin": "2025-08",
+            "target": "2026-02",
+            "horizon": 6,
+            "actual": 1747,
+            "predicted": 1643,
+            "baseline": 1748
+          },
+          {
+            "origin": "2025-09",
+            "target": "2025-10",
+            "horizon": 1,
+            "actual": 1908,
+            "predicted": 1746,
+            "baseline": 1864
+          },
+          {
+            "origin": "2025-09",
+            "target": "2025-11",
+            "horizon": 2,
+            "actual": 1650,
+            "predicted": 1723,
+            "baseline": 1650
+          },
+          {
+            "origin": "2025-09",
+            "target": "2025-12",
+            "horizon": 3,
+            "actual": 1858,
+            "predicted": 1685,
+            "baseline": 1790
+          },
+          {
+            "origin": "2025-09",
+            "target": "2026-01",
+            "horizon": 4,
+            "actual": 1786,
+            "predicted": 1673,
+            "baseline": 1700
+          },
+          {
+            "origin": "2025-09",
+            "target": "2026-02",
+            "horizon": 5,
+            "actual": 1747,
+            "predicted": 1677,
+            "baseline": 1748
+          },
+          {
+            "origin": "2025-09",
+            "target": "2026-03",
+            "horizon": 6,
+            "actual": 1892,
+            "predicted": 1685,
+            "baseline": 1766
+          },
+          {
+            "origin": "2025-10",
+            "target": "2025-11",
+            "horizon": 1,
+            "actual": 1650,
+            "predicted": 1807,
+            "baseline": 1650
+          },
+          {
+            "origin": "2025-10",
+            "target": "2025-12",
+            "horizon": 2,
+            "actual": 1858,
+            "predicted": 1763,
+            "baseline": 1790
+          },
+          {
+            "origin": "2025-10",
+            "target": "2026-01",
+            "horizon": 3,
+            "actual": 1786,
+            "predicted": 1756,
+            "baseline": 1700
+          },
+          {
+            "origin": "2025-10",
+            "target": "2026-02",
+            "horizon": 4,
+            "actual": 1747,
+            "predicted": 1750,
+            "baseline": 1748
+          },
+          {
+            "origin": "2025-10",
+            "target": "2026-03",
+            "horizon": 5,
+            "actual": 1892,
+            "predicted": 1752,
+            "baseline": 1766
+          },
+          {
+            "origin": "2025-10",
+            "target": "2026-04",
+            "horizon": 6,
+            "actual": 1800,
+            "predicted": 1775,
+            "baseline": 1769
+          },
+          {
+            "origin": "2025-11",
+            "target": "2025-12",
+            "horizon": 1,
+            "actual": 1858,
+            "predicted": 1675,
+            "baseline": 1790
+          },
+          {
+            "origin": "2025-11",
+            "target": "2026-01",
+            "horizon": 2,
+            "actual": 1786,
+            "predicted": 1670,
+            "baseline": 1700
+          },
+          {
+            "origin": "2025-11",
+            "target": "2026-02",
+            "horizon": 3,
+            "actual": 1747,
+            "predicted": 1660,
+            "baseline": 1748
+          },
+          {
+            "origin": "2025-11",
+            "target": "2026-03",
+            "horizon": 4,
+            "actual": 1892,
+            "predicted": 1673,
+            "baseline": 1766
+          },
+          {
+            "origin": "2025-11",
+            "target": "2026-04",
+            "horizon": 5,
+            "actual": 1800,
+            "predicted": 1702,
+            "baseline": 1769
+          },
+          {
+            "origin": "2025-11",
+            "target": "2026-05",
+            "horizon": 6,
+            "actual": 1798,
+            "predicted": 1702,
+            "baseline": 1746
+          },
+          {
+            "origin": "2025-12",
+            "target": "2026-01",
+            "horizon": 1,
+            "actual": 1786,
+            "predicted": 1760,
+            "baseline": 1700
+          },
+          {
+            "origin": "2025-12",
+            "target": "2026-02",
+            "horizon": 2,
+            "actual": 1747,
+            "predicted": 1749,
+            "baseline": 1748
+          },
+          {
+            "origin": "2025-12",
+            "target": "2026-03",
+            "horizon": 3,
+            "actual": 1892,
+            "predicted": 1768,
+            "baseline": 1766
+          },
+          {
+            "origin": "2025-12",
+            "target": "2026-04",
+            "horizon": 4,
+            "actual": 1800,
+            "predicted": 1782,
+            "baseline": 1769
+          },
+          {
+            "origin": "2025-12",
+            "target": "2026-05",
+            "horizon": 5,
+            "actual": 1798,
+            "predicted": 1779,
+            "baseline": 1746
+          },
+          {
+            "origin": "2025-12",
+            "target": "2026-06",
+            "horizon": 6,
+            "actual": 1759,
+            "predicted": 1801,
+            "baseline": 1655
+          }
+        ]
+      },
+      "forecast": [
+        {
+          "date": "2026-07",
+          "value": 1780,
+          "lower": 1686,
+          "upper": 1953
+        },
+        {
+          "date": "2026-08",
+          "value": 1765,
+          "lower": 1739,
+          "upper": 1953
+        },
+        {
+          "date": "2026-09",
+          "value": 1750,
+          "lower": 1744,
+          "upper": 1980
+        },
+        {
+          "date": "2026-10",
+          "value": 1731,
+          "lower": 1731,
+          "upper": 1978
+        },
+        {
+          "date": "2026-11",
+          "value": 1707,
+          "lower": 1707,
+          "upper": 1984
+        },
+        {
+          "date": "2026-12",
+          "value": 1697,
+          "lower": 1697,
+          "upper": 1947
+        }
+      ],
+      "anomalies": [
+        {
+          "date": "2020-04",
+          "value": 1455,
+          "expected": 1721,
+          "score": -3.63,
+          "direction": "below"
+        },
+        {
+          "date": "2020-11",
+          "value": 1343,
+          "expected": 1575,
+          "score": -3.73,
+          "direction": "below"
+        },
+        {
+          "date": "2022-11",
+          "value": 1072,
+          "expected": 1312,
+          "score": -4.08,
+          "direction": "below"
+        }
+      ]
+    },
+    "gaEA": {
+      "model": "Ridge autoregression",
+      "alpha": 1,
+      "trainingWindow": 84,
+      "seasonalPeriod": 12,
+      "learnedWeights": [
+        {
+          "feature": "Previous month",
+          "coefficient": 0.07466632393541339
+        },
+        {
+          "feature": "2 months earlier",
+          "coefficient": -4.082759639077568e-05
+        },
+        {
+          "feature": "3 months earlier",
+          "coefficient": 0.04046680289509517
+        },
+        {
+          "feature": "6 months earlier",
+          "coefficient": 0.03970476122322997
+        },
+        {
+          "feature": "12 months earlier",
+          "coefficient": 0.007459633474255179
+        },
+        {
+          "feature": "Recent 3-month average",
+          "coefficient": 0.041360565636046696
+        },
+        {
+          "feature": "Recent 12-month average",
+          "coefficient": -0.0221841439864397
+        },
+        {
+          "feature": "Annual seasonality \u00b7 sine",
+          "coefficient": 0.014549806321918608
+        },
+        {
+          "feature": "Annual seasonality \u00b7 cosine",
+          "coefficient": -0.016283531405891068
+        }
+      ],
+      "trainingTargets": 84,
+      "meanAbsolutePercentError": 11.551788562186793,
+      "trainingStart": "2019-07",
+      "trainingEnd": "2026-06",
+      "backtest": {
+        "originCount": 18,
+        "firstOrigin": "2024-07",
+        "lastOrigin": "2025-12",
+        "mae": 314,
+        "baselineMae": 560,
+        "improvementPct": 43.9,
+        "metrics": [
+          {
+            "horizon": 1,
+            "mae": 167,
+            "baselineMae": 586
+          },
+          {
+            "horizon": 2,
+            "mae": 228,
+            "baselineMae": 581
+          },
+          {
+            "horizon": 3,
+            "mae": 299,
+            "baselineMae": 560
+          },
+          {
+            "horizon": 4,
+            "mae": 353,
+            "baselineMae": 545
+          },
+          {
+            "horizon": 5,
+            "mae": 407,
+            "baselineMae": 546
+          },
+          {
+            "horizon": 6,
+            "mae": 427,
+            "baselineMae": 542
+          }
+        ],
+        "predictions": [
+          {
+            "origin": "2024-07",
+            "target": "2024-08",
+            "horizon": 1,
+            "actual": 2294,
+            "predicted": 2058,
+            "baseline": 1870
+          },
+          {
+            "origin": "2024-07",
+            "target": "2024-09",
+            "horizon": 2,
+            "actual": 2290,
+            "predicted": 1976,
+            "baseline": 1615
+          },
+          {
+            "origin": "2024-07",
+            "target": "2024-10",
+            "horizon": 3,
+            "actual": 2337,
+            "predicted": 1978,
+            "baseline": 1792
+          },
+          {
+            "origin": "2024-07",
+            "target": "2024-11",
+            "horizon": 4,
+            "actual": 2171,
+            "predicted": 1905,
+            "baseline": 1714
+          },
+          {
+            "origin": "2024-07",
+            "target": "2024-12",
+            "horizon": 5,
+            "actual": 2252,
+            "predicted": 1900,
+            "baseline": 1870
+          },
+          {
+            "origin": "2024-07",
+            "target": "2025-01",
+            "horizon": 6,
+            "actual": 2400,
+            "predicted": 1910,
+            "baseline": 1859
+          },
+          {
+            "origin": "2024-08",
+            "target": "2024-09",
+            "horizon": 1,
+            "actual": 2290,
+            "predicted": 2066,
+            "baseline": 1615
+          },
+          {
+            "origin": "2024-08",
+            "target": "2024-10",
+            "horizon": 2,
+            "actual": 2337,
+            "predicted": 2025,
+            "baseline": 1792
+          },
+          {
+            "origin": "2024-08",
+            "target": "2024-11",
+            "horizon": 3,
+            "actual": 2171,
+            "predicted": 1978,
+            "baseline": 1714
+          },
+          {
+            "origin": "2024-08",
+            "target": "2024-12",
+            "horizon": 4,
+            "actual": 2252,
+            "predicted": 1939,
+            "baseline": 1870
+          },
+          {
+            "origin": "2024-08",
+            "target": "2025-01",
+            "horizon": 5,
+            "actual": 2400,
+            "predicted": 1926,
+            "baseline": 1859
+          },
+          {
+            "origin": "2024-08",
+            "target": "2025-02",
+            "horizon": 6,
+            "actual": 2498,
+            "predicted": 1977,
+            "baseline": 1941
+          },
+          {
+            "origin": "2024-09",
+            "target": "2024-10",
+            "horizon": 1,
+            "actual": 2337,
+            "predicted": 2123,
+            "baseline": 1792
+          },
+          {
+            "origin": "2024-09",
+            "target": "2024-11",
+            "horizon": 2,
+            "actual": 2171,
+            "predicted": 2040,
+            "baseline": 1714
+          },
+          {
+            "origin": "2024-09",
+            "target": "2024-12",
+            "horizon": 3,
+            "actual": 2252,
+            "predicted": 2025,
+            "baseline": 1870
+          },
+          {
+            "origin": "2024-09",
+            "target": "2025-01",
+            "horizon": 4,
+            "actual": 2400,
+            "predicted": 1983,
+            "baseline": 1859
+          },
+          {
+            "origin": "2024-09",
+            "target": "2025-02",
+            "horizon": 5,
+            "actual": 2498,
+            "predicted": 2013,
+            "baseline": 1941
+          },
+          {
+            "origin": "2024-09",
+            "target": "2025-03",
+            "horizon": 6,
+            "actual": 2851,
+            "predicted": 2063,
+            "baseline": 2078
+          },
+          {
+            "origin": "2024-10",
+            "target": "2024-11",
+            "horizon": 1,
+            "actual": 2171,
+            "predicted": 2130,
+            "baseline": 1714
+          },
+          {
+            "origin": "2024-10",
+            "target": "2024-12",
+            "horizon": 2,
+            "actual": 2252,
+            "predicted": 2072,
+            "baseline": 1870
+          },
+          {
+            "origin": "2024-10",
+            "target": "2025-01",
+            "horizon": 3,
+            "actual": 2400,
+            "predicted": 2056,
+            "baseline": 1859
+          },
+          {
+            "origin": "2024-10",
+            "target": "2025-02",
+            "horizon": 4,
+            "actual": 2498,
+            "predicted": 2060,
+            "baseline": 1941
+          },
+          {
+            "origin": "2024-10",
+            "target": "2025-03",
+            "horizon": 5,
+            "actual": 2851,
+            "predicted": 2084,
+            "baseline": 2078
+          },
+          {
+            "origin": "2024-10",
+            "target": "2025-04",
+            "horizon": 6,
+            "actual": 2896,
+            "predicted": 2143,
+            "baseline": 2295
+          },
+          {
+            "origin": "2024-11",
+            "target": "2024-12",
+            "horizon": 1,
+            "actual": 2252,
+            "predicted": 2097,
+            "baseline": 1870
+          },
+          {
+            "origin": "2024-11",
+            "target": "2025-01",
+            "horizon": 2,
+            "actual": 2400,
+            "predicted": 2075,
+            "baseline": 1859
+          },
+          {
+            "origin": "2024-11",
+            "target": "2025-02",
+            "horizon": 3,
+            "actual": 2498,
+            "predicted": 2084,
+            "baseline": 1941
+          },
+          {
+            "origin": "2024-11",
+            "target": "2025-03",
+            "horizon": 4,
+            "actual": 2851,
+            "predicted": 2104,
+            "baseline": 2078
+          },
+          {
+            "origin": "2024-11",
+            "target": "2025-04",
+            "horizon": 5,
+            "actual": 2896,
+            "predicted": 2159,
+            "baseline": 2295
+          },
+          {
+            "origin": "2024-11",
+            "target": "2025-05",
+            "horizon": 6,
+            "actual": 2708,
+            "predicted": 2139,
+            "baseline": 2170
+          },
+          {
+            "origin": "2024-12",
+            "target": "2025-01",
+            "horizon": 1,
+            "actual": 2400,
+            "predicted": 2142,
+            "baseline": 1859
+          },
+          {
+            "origin": "2024-12",
+            "target": "2025-02",
+            "horizon": 2,
+            "actual": 2498,
+            "predicted": 2120,
+            "baseline": 1941
+          },
+          {
+            "origin": "2024-12",
+            "target": "2025-03",
+            "horizon": 3,
+            "actual": 2851,
+            "predicted": 2163,
+            "baseline": 2078
+          },
+          {
+            "origin": "2024-12",
+            "target": "2025-04",
+            "horizon": 4,
+            "actual": 2896,
+            "predicted": 2195,
+            "baseline": 2295
+          },
+          {
+            "origin": "2024-12",
+            "target": "2025-05",
+            "horizon": 5,
+            "actual": 2708,
+            "predicted": 2155,
+            "baseline": 2170
+          },
+          {
+            "origin": "2024-12",
+            "target": "2025-06",
+            "horizon": 6,
+            "actual": 2943,
+            "predicted": 2163,
+            "baseline": 2197
+          },
+          {
+            "origin": "2025-01",
+            "target": "2025-02",
+            "horizon": 1,
+            "actual": 2498,
+            "predicted": 2237,
+            "baseline": 1941
+          },
+          {
+            "origin": "2025-01",
+            "target": "2025-03",
+            "horizon": 2,
+            "actual": 2851,
+            "predicted": 2233,
+            "baseline": 2078
+          },
+          {
+            "origin": "2025-01",
+            "target": "2025-04",
+            "horizon": 3,
+            "actual": 2896,
+            "predicted": 2310,
+            "baseline": 2295
+          },
+          {
+            "origin": "2025-01",
+            "target": "2025-05",
+            "horizon": 4,
+            "actual": 2708,
+            "predicted": 2234,
+            "baseline": 2170
+          },
+          {
+            "origin": "2025-01",
+            "target": "2025-06",
+            "horizon": 5,
+            "actual": 2943,
+            "predicted": 2209,
+            "baseline": 2197
+          },
+          {
+            "origin": "2025-01",
+            "target": "2025-07",
+            "horizon": 6,
+            "actual": 2824,
+            "predicted": 2221,
+            "baseline": 2156
+          },
+          {
+            "origin": "2025-02",
+            "target": "2025-03",
+            "horizon": 1,
+            "actual": 2851,
+            "predicted": 2362,
+            "baseline": 2078
+          },
+          {
+            "origin": "2025-02",
+            "target": "2025-04",
+            "horizon": 2,
+            "actual": 2896,
+            "predicted": 2392,
+            "baseline": 2295
+          },
+          {
+            "origin": "2025-02",
+            "target": "2025-05",
+            "horizon": 3,
+            "actual": 2708,
+            "predicted": 2362,
+            "baseline": 2170
+          },
+          {
+            "origin": "2025-02",
+            "target": "2025-06",
+            "horizon": 4,
+            "actual": 2943,
+            "predicted": 2305,
+            "baseline": 2197
+          },
+          {
+            "origin": "2025-02",
+            "target": "2025-07",
+            "horizon": 5,
+            "actual": 2824,
+            "predicted": 2286,
+            "baseline": 2156
+          },
+          {
+            "origin": "2025-02",
+            "target": "2025-08",
+            "horizon": 6,
+            "actual": 2846,
+            "predicted": 2258,
+            "baseline": 2294
+          },
+          {
+            "origin": "2025-03",
+            "target": "2025-04",
+            "horizon": 1,
+            "actual": 2896,
+            "predicted": 2662,
+            "baseline": 2295
+          },
+          {
+            "origin": "2025-03",
+            "target": "2025-05",
+            "horizon": 2,
+            "actual": 2708,
+            "predicted": 2550,
+            "baseline": 2170
+          },
+          {
+            "origin": "2025-03",
+            "target": "2025-06",
+            "horizon": 3,
+            "actual": 2943,
+            "predicted": 2577,
+            "baseline": 2197
+          },
+          {
+            "origin": "2025-03",
+            "target": "2025-07",
+            "horizon": 4,
+            "actual": 2824,
+            "predicted": 2508,
+            "baseline": 2156
+          },
+          {
+            "origin": "2025-03",
+            "target": "2025-08",
+            "horizon": 5,
+            "actual": 2846,
+            "predicted": 2426,
+            "baseline": 2294
+          },
+          {
+            "origin": "2025-03",
+            "target": "2025-09",
+            "horizon": 6,
+            "actual": 3107,
+            "predicted": 2443,
+            "baseline": 2290
+          },
+          {
+            "origin": "2025-04",
+            "target": "2025-05",
+            "horizon": 1,
+            "actual": 2708,
+            "predicted": 2682,
+            "baseline": 2170
+          },
+          {
+            "origin": "2025-04",
+            "target": "2025-06",
+            "horizon": 2,
+            "actual": 2943,
+            "predicted": 2677,
+            "baseline": 2197
+          },
+          {
+            "origin": "2025-04",
+            "target": "2025-07",
+            "horizon": 3,
+            "actual": 2824,
+            "predicted": 2646,
+            "baseline": 2156
+          },
+          {
+            "origin": "2025-04",
+            "target": "2025-08",
+            "horizon": 4,
+            "actual": 2846,
+            "predicted": 2541,
+            "baseline": 2294
+          },
+          {
+            "origin": "2025-04",
+            "target": "2025-09",
+            "horizon": 5,
+            "actual": 3107,
+            "predicted": 2537,
+            "baseline": 2290
+          },
+          {
+            "origin": "2025-04",
+            "target": "2025-10",
+            "horizon": 6,
+            "actual": 2877,
+            "predicted": 2509,
+            "baseline": 2337
+          },
+          {
+            "origin": "2025-05",
+            "target": "2025-06",
+            "horizon": 1,
+            "actual": 2943,
+            "predicted": 2694,
+            "baseline": 2197
+          },
+          {
+            "origin": "2025-05",
+            "target": "2025-07",
+            "horizon": 2,
+            "actual": 2824,
+            "predicted": 2660,
+            "baseline": 2156
+          },
+          {
+            "origin": "2025-05",
+            "target": "2025-08",
+            "horizon": 3,
+            "actual": 2846,
+            "predicted": 2559,
+            "baseline": 2294
+          },
+          {
+            "origin": "2025-05",
+            "target": "2025-09",
+            "horizon": 4,
+            "actual": 3107,
+            "predicted": 2553,
+            "baseline": 2290
+          },
+          {
+            "origin": "2025-05",
+            "target": "2025-10",
+            "horizon": 5,
+            "actual": 2877,
+            "predicted": 2524,
+            "baseline": 2337
+          },
+          {
+            "origin": "2025-05",
+            "target": "2025-11",
+            "horizon": 6,
+            "actual": 2803,
+            "predicted": 2419,
+            "baseline": 2171
+          },
+          {
+            "origin": "2025-06",
+            "target": "2025-07",
+            "horizon": 1,
+            "actual": 2824,
+            "predicted": 2822,
+            "baseline": 2156
+          },
+          {
+            "origin": "2025-06",
+            "target": "2025-08",
+            "horizon": 2,
+            "actual": 2846,
+            "predicted": 2696,
+            "baseline": 2294
+          },
+          {
+            "origin": "2025-06",
+            "target": "2025-09",
+            "horizon": 3,
+            "actual": 3107,
+            "predicted": 2744,
+            "baseline": 2290
+          },
+          {
+            "origin": "2025-06",
+            "target": "2025-10",
+            "horizon": 4,
+            "actual": 2877,
+            "predicted": 2700,
+            "baseline": 2337
+          },
+          {
+            "origin": "2025-06",
+            "target": "2025-11",
+            "horizon": 5,
+            "actual": 2803,
+            "predicted": 2572,
+            "baseline": 2171
+          },
+          {
+            "origin": "2025-06",
+            "target": "2025-12",
+            "horizon": 6,
+            "actual": 2840,
+            "predicted": 2612,
+            "baseline": 2252
+          },
+          {
+            "origin": "2025-07",
+            "target": "2025-08",
+            "horizon": 1,
+            "actual": 2846,
+            "predicted": 2706,
+            "baseline": 2294
+          },
+          {
+            "origin": "2025-07",
+            "target": "2025-09",
+            "horizon": 2,
+            "actual": 3107,
+            "predicted": 2759,
+            "baseline": 2290
+          },
+          {
+            "origin": "2025-07",
+            "target": "2025-10",
+            "horizon": 3,
+            "actual": 2877,
+            "predicted": 2717,
+            "baseline": 2337
+          },
+          {
+            "origin": "2025-07",
+            "target": "2025-11",
+            "horizon": 4,
+            "actual": 2803,
+            "predicted": 2591,
+            "baseline": 2171
+          },
+          {
+            "origin": "2025-07",
+            "target": "2025-12",
+            "horizon": 5,
+            "actual": 2840,
+            "predicted": 2634,
+            "baseline": 2252
+          },
+          {
+            "origin": "2025-07",
+            "target": "2026-01",
+            "horizon": 6,
+            "actual": 2915,
+            "predicted": 2651,
+            "baseline": 2400
+          },
+          {
+            "origin": "2025-08",
+            "target": "2025-09",
+            "horizon": 1,
+            "actual": 3107,
+            "predicted": 2850,
+            "baseline": 2290
+          },
+          {
+            "origin": "2025-08",
+            "target": "2025-10",
+            "horizon": 2,
+            "actual": 2877,
+            "predicted": 2795,
+            "baseline": 2337
+          },
+          {
+            "origin": "2025-08",
+            "target": "2025-11",
+            "horizon": 3,
+            "actual": 2803,
+            "predicted": 2699,
+            "baseline": 2171
+          },
+          {
+            "origin": "2025-08",
+            "target": "2025-12",
+            "horizon": 4,
+            "actual": 2840,
+            "predicted": 2738,
+            "baseline": 2252
+          },
+          {
+            "origin": "2025-08",
+            "target": "2026-01",
+            "horizon": 5,
+            "actual": 2915,
+            "predicted": 2749,
+            "baseline": 2400
+          },
+          {
+            "origin": "2025-08",
+            "target": "2026-02",
+            "horizon": 6,
+            "actual": 2829,
+            "predicted": 2788,
+            "baseline": 2498
+          },
+          {
+            "origin": "2025-09",
+            "target": "2025-10",
+            "horizon": 1,
+            "actual": 2877,
+            "predicted": 2952,
+            "baseline": 2337
+          },
+          {
+            "origin": "2025-09",
+            "target": "2025-11",
+            "horizon": 2,
+            "actual": 2803,
+            "predicted": 2825,
+            "baseline": 2171
+          },
+          {
+            "origin": "2025-09",
+            "target": "2025-12",
+            "horizon": 3,
+            "actual": 2840,
+            "predicted": 2927,
+            "baseline": 2252
+          },
+          {
+            "origin": "2025-09",
+            "target": "2026-01",
+            "horizon": 4,
+            "actual": 2915,
+            "predicted": 2928,
+            "baseline": 2400
+          },
+          {
+            "origin": "2025-09",
+            "target": "2026-02",
+            "horizon": 5,
+            "actual": 2829,
+            "predicted": 2956,
+            "baseline": 2498
+          },
+          {
+            "origin": "2025-09",
+            "target": "2026-03",
+            "horizon": 6,
+            "actual": 2549,
+            "predicted": 3160,
+            "baseline": 2851
+          },
+          {
+            "origin": "2025-10",
+            "target": "2025-11",
+            "horizon": 1,
+            "actual": 2803,
+            "predicted": 2782,
+            "baseline": 2171
+          },
+          {
+            "origin": "2025-10",
+            "target": "2025-12",
+            "horizon": 2,
+            "actual": 2840,
+            "predicted": 2890,
+            "baseline": 2252
+          },
+          {
+            "origin": "2025-10",
+            "target": "2026-01",
+            "horizon": 3,
+            "actual": 2915,
+            "predicted": 2874,
+            "baseline": 2400
+          },
+          {
+            "origin": "2025-10",
+            "target": "2026-02",
+            "horizon": 4,
+            "actual": 2829,
+            "predicted": 2906,
+            "baseline": 2498
+          },
+          {
+            "origin": "2025-10",
+            "target": "2026-03",
+            "horizon": 5,
+            "actual": 2549,
+            "predicted": 3110,
+            "baseline": 2851
+          },
+          {
+            "origin": "2025-10",
+            "target": "2026-04",
+            "horizon": 6,
+            "actual": 3161,
+            "predicted": 3165,
+            "baseline": 2896
+          },
+          {
+            "origin": "2025-11",
+            "target": "2025-12",
+            "horizon": 1,
+            "actual": 2840,
+            "predicted": 2907,
+            "baseline": 2252
+          },
+          {
+            "origin": "2025-11",
+            "target": "2026-01",
+            "horizon": 2,
+            "actual": 2915,
+            "predicted": 2890,
+            "baseline": 2400
+          },
+          {
+            "origin": "2025-11",
+            "target": "2026-02",
+            "horizon": 3,
+            "actual": 2829,
+            "predicted": 2929,
+            "baseline": 2498
+          },
+          {
+            "origin": "2025-11",
+            "target": "2026-03",
+            "horizon": 4,
+            "actual": 2549,
+            "predicted": 3134,
+            "baseline": 2851
+          },
+          {
+            "origin": "2025-11",
+            "target": "2026-04",
+            "horizon": 5,
+            "actual": 3161,
+            "predicted": 3188,
+            "baseline": 2896
+          },
+          {
+            "origin": "2025-11",
+            "target": "2026-05",
+            "horizon": 6,
+            "actual": 3191,
+            "predicted": 3196,
+            "baseline": 2708
+          },
+          {
+            "origin": "2025-12",
+            "target": "2026-01",
+            "horizon": 1,
+            "actual": 2915,
+            "predicted": 2854,
+            "baseline": 2400
+          },
+          {
+            "origin": "2025-12",
+            "target": "2026-02",
+            "horizon": 2,
+            "actual": 2829,
+            "predicted": 2900,
+            "baseline": 2498
+          },
+          {
+            "origin": "2025-12",
+            "target": "2026-03",
+            "horizon": 3,
+            "actual": 2549,
+            "predicted": 3086,
+            "baseline": 2851
+          },
+          {
+            "origin": "2025-12",
+            "target": "2026-04",
+            "horizon": 4,
+            "actual": 3161,
+            "predicted": 3146,
+            "baseline": 2896
+          },
+          {
+            "origin": "2025-12",
+            "target": "2026-05",
+            "horizon": 5,
+            "actual": 3191,
+            "predicted": 3159,
+            "baseline": 2708
+          },
+          {
+            "origin": "2025-12",
+            "target": "2026-06",
+            "horizon": 6,
+            "actual": 3256,
+            "predicted": 3229,
+            "baseline": 2943
+          }
+        ]
+      },
+      "forecast": [
+        {
+          "date": "2026-07",
+          "value": 3271,
+          "lower": 3250,
+          "upper": 3657
+        },
+        {
+          "date": "2026-08",
+          "value": 3214,
+          "lower": 3180,
+          "upper": 3818
+        },
+        {
+          "date": "2026-09",
+          "value": 3093,
+          "lower": 2997,
+          "upper": 3757
+        },
+        {
+          "date": "2026-10",
+          "value": 3156,
+          "lower": 3121,
+          "upper": 4069
+        },
+        {
+          "date": "2026-11",
+          "value": 3155,
+          "lower": 3095,
+          "upper": 4213
+        },
+        {
+          "date": "2026-12",
+          "value": 3157,
+          "lower": 3153,
+          "upper": 4276
+        }
+      ],
+      "anomalies": [
+        {
+          "date": "2019-05",
+          "value": 2845,
+          "expected": 2007,
+          "score": 7.07,
+          "direction": "above"
+        },
+        {
+          "date": "2019-06",
+          "value": 2086,
+          "expected": 2388,
+          "score": -3.71,
+          "direction": "below"
+        },
+        {
+          "date": "2019-07",
+          "value": 1994,
+          "expected": 2333,
+          "score": -4.17,
+          "direction": "below"
+        },
+        {
+          "date": "2020-04",
+          "value": 1768,
+          "expected": 2059,
+          "score": -3.61,
+          "direction": "below"
+        },
+        {
+          "date": "2021-05",
+          "value": 1310,
+          "expected": 2020,
+          "score": -5.9,
+          "direction": "below"
+        }
+      ]
+    }
+  }
+}

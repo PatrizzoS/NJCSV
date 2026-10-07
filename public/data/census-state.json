@@ -1,0 +1,35 @@
+{
+  "county": "Total",
+  "name": "New Jersey total",
+  "period": "2020\u20132024",
+  "sources": [
+    {
+      "table": "B11001",
+      "url": "https://www2.census.gov/programs-surveys/acs/summary_file/2024/table-based-SF/data/5YRData/acsdt5y2024-b11001.dat",
+      "extractSha256": "3853191a7097250752633a937b2d25ad6bb1ccef0892574f5d858aa7bb8becf1"
+    },
+    {
+      "table": "B17017",
+      "url": "https://www2.census.gov/programs-surveys/acs/summary_file/2024/table-based-SF/data/5YRData/acsdt5y2024-b17017.dat",
+      "extractSha256": "2aefdf33f1515bdef8eeaa02e2af7a7d181b5768ddbe7a928481926e460d9f44"
+    },
+    {
+      "table": "B19013",
+      "url": "https://www2.census.gov/programs-surveys/acs/summary_file/2024/table-based-SF/data/5YRData/acsdt5y2024-b19013.dat",
+      "extractSha256": "46ca278c9d695e854d7b6abbe2f1d6745982c03315378fc2e0166d015f20a520"
+    },
+    {
+      "table": "B25010",
+      "url": "https://www2.census.gov/programs-surveys/acs/summary_file/2024/table-based-SF/data/5YRData/acsdt5y2024-b25010.dat",
+      "extractSha256": "569c772ed093186b4c321185d0690fd9a9917e7a09842f85ddc8d1c7dcfbeaab"
+    }
+  ],
+  "households": 3507701,
+  "householdsMoe": 5116,
+  "povertyUniverse": 3507701,
+  "povertyHouseholds": 355292,
+  "medianIncome": 103556,
+  "medianIncomeMoe": 513,
+  "averageHouseholdSize": 2.62,
+  "povertyPct": 10.128913496332784
+}
