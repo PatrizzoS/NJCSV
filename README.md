@@ -1,6 +1,6 @@
 # NJCSV — New Jersey Civil Statistics Visualizations
 
-A separate, Vercel-ready site for exploring New Jersey Division of Family Development programs. It uses actual statewide CPS report values, with a source PDF, table, and page attached to each observation. It is an independent analysis, not an official state website.
+A site for exploring New Jersey Division of Family Development programs. It uses actual statewide CPS report values, with a source PDF, table, and page attached to each observation. It is an independent analysis, not an official state website.
 
 ## Included
 
@@ -39,26 +39,6 @@ npm run preview
 ```
 
 The production build is `dist/`. Normal builds use the checked-in data snapshot; they do not download reports or train models.
-
-## Deploy to Vercel
-
-The included `vercel.json` specifies the static build and output, with security headers. No Python environment is required on Vercel.
-
-**Git workflow:** push this project to a Git repository, import it in Vercel, and use the repository root as the project root. Framework preset: **Other**. Build command: `npm run build`. Output directory: `dist`. The included configuration supplies these settings.
-
-**CLI workflow:** from this project directory:
-
-```sh
-npx vercel
-```
-
-Follow the Vercel sign-in/project prompts and check the preview URL. Publish when ready:
-
-```sh
-npx vercel --prod
-```
-
-See [Vercel deployment documentation](https://vercel.com/docs/deployments) and [project configuration](https://vercel.com/docs/project-configuration). This project is ready to deploy; it has not been published to a Vercel account.
 
 ## Data sources and preparation
 
